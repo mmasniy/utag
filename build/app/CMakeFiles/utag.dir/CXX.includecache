@@ -26,6 +26,8 @@ taglib_export.h
 tstring.h
 ../3dparty/taglib/taglib/tstring.h
 
+../3dparty/taglib/taglib/taglib_export.h
+
 ../3dparty/taglib/taglib/toolkit/taglib.h
 taglib_config.h
 ../3dparty/taglib/taglib/toolkit/taglib_config.h
@@ -140,18 +142,14 @@ iostream
 
 ../build/3dparty/taglib/taglib_config.h
 
-/Users/mmasniy/Desktop/taglib/taglib/tag.h
-taglib_export.h
-/Users/mmasniy/Desktop/taglib/taglib/taglib_export.h
-tstring.h
-/Users/mmasniy/Desktop/taglib/taglib/tstring.h
-
-/Users/mmasniy/Desktop/taglib/taglib/taglib_export.h
-
 /Users/mmasniy/Desktop/utag/app/main.cpp
 iomanip
 -
+string
+-
 iostream
+-
+dirent.h
 -
 ../../taglib/taglib/tag.h
 /Users/mmasniy/Desktop/taglib/taglib/tag.h

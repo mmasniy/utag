@@ -1,0 +1,1029 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="utag"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\3dparty\;CMake Files\3dparty\taglib\;CMake Files\3dparty\taglib\taglib\;CMake Files\3dparty\taglib\taglib\toolkit\;CMake Files\3dparty\taglib\bindings\;CMake Files\3dparty\taglib\bindings\c\;CMake Files\app\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/mmasniy/Desktop/utag/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="/Users/mmasniy/Desktop/utag/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/strip">
+				<Option working_dir="/Users/mmasniy/Desktop/utag/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="/Users/mmasniy/Desktop/utag/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="/Users/mmasniy/Desktop/utag/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/mmasniy/Desktop/utag/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/mmasniy/Desktop/utag/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="utag">
+				<Option output="/Users/mmasniy/Desktop/utag/cmake-build-debug/app/utag" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mmasniy/Desktop/utag/cmake-build-debug/app"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/mmasniy/Desktop/utag/app/../3dparty/taglib/taglib"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/app/../3dparty/taglib/taglib/toolkit"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/app/../build/3dparty/taglib"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/app/src"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/app/Makefile&quot;  VERBOSE=1 utag"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/app/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/app/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/app/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="utag/fast">
+				<Option output="/Users/mmasniy/Desktop/utag/cmake-build-debug/app/utag" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mmasniy/Desktop/utag/cmake-build-debug/app"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/mmasniy/Desktop/utag/app/../3dparty/taglib/taglib"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/app/../3dparty/taglib/taglib/toolkit"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/app/../build/3dparty/taglib"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/app/src"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/app/Makefile&quot;  VERBOSE=1 utag/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/app/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/app/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/app/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="uninstall">
+				<Option working_dir="/Users/mmasniy/Desktop/utag/cmake-build-debug/3dparty/taglib"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/3dparty/taglib/Makefile&quot;  VERBOSE=1 uninstall"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/3dparty/taglib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/3dparty/taglib/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/3dparty/taglib/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="docs">
+				<Option working_dir="/Users/mmasniy/Desktop/utag/cmake-build-debug/3dparty/taglib"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/3dparty/taglib/Makefile&quot;  VERBOSE=1 docs"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/3dparty/taglib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/3dparty/taglib/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/3dparty/taglib/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="tag">
+				<Option output="/Users/mmasniy/Desktop/utag/cmake-build-debug/3dparty/taglib/taglib/libtag.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mmasniy/Desktop/utag/cmake-build-debug/3dparty/taglib/taglib"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DTAGLIB_STATIC"/>
+					<Add option="-DHAVE_CONFIG_H"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/cmake-build-debug/3dparty/taglib/taglib"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/cmake-build-debug/3dparty/taglib"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/toolkit"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/asf"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/ogg"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/ogg/flac"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/flac"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpc"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mp4"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/ogg/vorbis"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/ogg/speex"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/ogg/opus"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/frames"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v1"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/ape"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/wavpack"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/trueaudio"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/riff"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/riff/aiff"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/riff/wav"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mod"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/s3m"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/it"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/xm"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/dsf"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/dsdiff"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/3rdparty"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/3dparty/taglib/taglib/Makefile&quot;  VERBOSE=1 tag"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/3dparty/taglib/taglib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/3dparty/taglib/taglib/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/3dparty/taglib/taglib/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="tag/fast">
+				<Option output="/Users/mmasniy/Desktop/utag/cmake-build-debug/3dparty/taglib/taglib/libtag.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mmasniy/Desktop/utag/cmake-build-debug/3dparty/taglib/taglib"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DTAGLIB_STATIC"/>
+					<Add option="-DHAVE_CONFIG_H"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/cmake-build-debug/3dparty/taglib/taglib"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/cmake-build-debug/3dparty/taglib"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/toolkit"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/asf"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/ogg"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/ogg/flac"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/flac"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpc"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mp4"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/ogg/vorbis"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/ogg/speex"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/ogg/opus"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/frames"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v1"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/ape"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/wavpack"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/trueaudio"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/riff"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/riff/aiff"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/riff/wav"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mod"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/s3m"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/it"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/xm"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/dsf"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/dsdiff"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/3rdparty"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/3dparty/taglib/taglib/Makefile&quot;  VERBOSE=1 tag/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/3dparty/taglib/taglib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/3dparty/taglib/taglib/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/3dparty/taglib/taglib/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="tag_c">
+				<Option output="/Users/mmasniy/Desktop/utag/cmake-build-debug/3dparty/taglib/bindings/c/libtag_c.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mmasniy/Desktop/utag/cmake-build-debug/3dparty/taglib/bindings/c"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DTAGLIB_STATIC"/>
+					<Add option="-DHAVE_CONFIG_H"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/cmake-build-debug/3dparty/taglib"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/bindings/c/../../taglib"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/bindings/c/../../taglib/toolkit"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/bindings/c/../../taglib/asf"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/bindings/c/../../taglib/mpeg"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/bindings/c/../../taglib/ogg"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/bindings/c/../../taglib/ogg/vorbis"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/bindings/c/../../taglib/ogg/flac"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/bindings/c/../../taglib/flac"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/bindings/c/../../taglib/mpc"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/bindings/c/../../taglib/mp4"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/bindings/c/../../taglib/mpeg/id3v2"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/bindings/c/../../taglib/mpeg/id3v2/frames"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/bindings/c/../../taglib/wavpack"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/bindings/c/../../taglib/ogg/speex"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/bindings/c/../../taglib/trueaudio"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/3dparty/taglib/bindings/c/Makefile&quot;  VERBOSE=1 tag_c"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/3dparty/taglib/bindings/c/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/3dparty/taglib/bindings/c/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/3dparty/taglib/bindings/c/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="tag_c/fast">
+				<Option output="/Users/mmasniy/Desktop/utag/cmake-build-debug/3dparty/taglib/bindings/c/libtag_c.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mmasniy/Desktop/utag/cmake-build-debug/3dparty/taglib/bindings/c"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DTAGLIB_STATIC"/>
+					<Add option="-DHAVE_CONFIG_H"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/cmake-build-debug/3dparty/taglib"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/bindings/c/../../taglib"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/bindings/c/../../taglib/toolkit"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/bindings/c/../../taglib/asf"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/bindings/c/../../taglib/mpeg"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/bindings/c/../../taglib/ogg"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/bindings/c/../../taglib/ogg/vorbis"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/bindings/c/../../taglib/ogg/flac"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/bindings/c/../../taglib/flac"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/bindings/c/../../taglib/mpc"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/bindings/c/../../taglib/mp4"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/bindings/c/../../taglib/mpeg/id3v2"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/bindings/c/../../taglib/mpeg/id3v2/frames"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/bindings/c/../../taglib/wavpack"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/bindings/c/../../taglib/ogg/speex"/>
+					<Add directory="/Users/mmasniy/Desktop/utag/3dparty/taglib/bindings/c/../../taglib/trueaudio"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/3dparty/taglib/bindings/c/Makefile&quot;  VERBOSE=1 tag_c/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/3dparty/taglib/bindings/c/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/3dparty/taglib/bindings/c/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mmasniy/Desktop/utag/cmake-build-debug/3dparty/taglib/bindings/c/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/bindings/c/tag_c.cpp">
+			<Option target="tag_c"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/bindings/c/tag_c.h">
+			<Option target="tag_c"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/ape/apefile.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/ape/apefile.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/ape/apefooter.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/ape/apefooter.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/ape/apeitem.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/ape/apeitem.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/ape/apeproperties.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/ape/apeproperties.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/ape/apetag.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/ape/apetag.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/asf/asfattribute.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/asf/asfattribute.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/asf/asffile.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/asf/asffile.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/asf/asfpicture.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/asf/asfpicture.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/asf/asfproperties.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/asf/asfproperties.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/asf/asftag.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/asf/asftag.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/audioproperties.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/audioproperties.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/fileref.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/fileref.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/flac/flacfile.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/flac/flacfile.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/flac/flacmetadatablock.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/flac/flacmetadatablock.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/flac/flacpicture.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/flac/flacpicture.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/flac/flacproperties.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/flac/flacproperties.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/flac/flacunknownmetadatablock.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/flac/flacunknownmetadatablock.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/it/itfile.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/it/itfile.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/it/itproperties.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/it/itproperties.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mod/modfile.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mod/modfile.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mod/modfilebase.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mod/modfilebase.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mod/modproperties.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mod/modproperties.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mod/modtag.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mod/modtag.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mp4/mp4atom.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mp4/mp4atom.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mp4/mp4coverart.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mp4/mp4coverart.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mp4/mp4file.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mp4/mp4file.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mp4/mp4item.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mp4/mp4item.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mp4/mp4properties.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mp4/mp4properties.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mp4/mp4tag.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mp4/mp4tag.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpc/mpcfile.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpc/mpcfile.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpc/mpcproperties.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpc/mpcproperties.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v1/id3v1genres.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v1/id3v1genres.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v1/id3v1tag.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v1/id3v1tag.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/frames/attachedpictureframe.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/frames/attachedpictureframe.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/frames/chapterframe.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/frames/chapterframe.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/frames/commentsframe.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/frames/commentsframe.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/frames/eventtimingcodesframe.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/frames/eventtimingcodesframe.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/frames/generalencapsulatedobjectframe.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/frames/generalencapsulatedobjectframe.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/frames/ownershipframe.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/frames/ownershipframe.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/frames/podcastframe.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/frames/podcastframe.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/frames/popularimeterframe.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/frames/popularimeterframe.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/frames/privateframe.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/frames/privateframe.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/frames/relativevolumeframe.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/frames/relativevolumeframe.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/frames/synchronizedlyricsframe.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/frames/synchronizedlyricsframe.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/frames/tableofcontentsframe.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/frames/tableofcontentsframe.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/frames/textidentificationframe.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/frames/textidentificationframe.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/frames/uniquefileidentifierframe.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/frames/uniquefileidentifierframe.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/frames/unknownframe.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/frames/unknownframe.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/frames/unsynchronizedlyricsframe.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/frames/unsynchronizedlyricsframe.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/frames/urllinkframe.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/frames/urllinkframe.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/id3v2.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/id3v2extendedheader.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/id3v2extendedheader.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/id3v2footer.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/id3v2footer.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/id3v2frame.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/id3v2frame.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/id3v2framefactory.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/id3v2framefactory.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/id3v2header.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/id3v2header.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/id3v2synchdata.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/id3v2synchdata.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/id3v2tag.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/id3v2/id3v2tag.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/mpegfile.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/mpegfile.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/mpegheader.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/mpegheader.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/mpegproperties.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/mpegproperties.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/xingheader.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/mpeg/xingheader.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/ogg/flac/oggflacfile.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/ogg/flac/oggflacfile.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/ogg/oggfile.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/ogg/oggfile.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/ogg/oggpage.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/ogg/oggpage.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/ogg/oggpageheader.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/ogg/oggpageheader.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/ogg/opus/opusfile.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/ogg/opus/opusfile.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/ogg/opus/opusproperties.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/ogg/opus/opusproperties.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/ogg/speex/speexfile.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/ogg/speex/speexfile.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/ogg/speex/speexproperties.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/ogg/speex/speexproperties.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/ogg/vorbis/vorbisfile.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/ogg/vorbis/vorbisfile.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/ogg/vorbis/vorbisproperties.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/ogg/vorbis/vorbisproperties.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/ogg/xiphcomment.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/ogg/xiphcomment.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/riff/aiff/aifffile.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/riff/aiff/aifffile.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/riff/aiff/aiffproperties.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/riff/aiff/aiffproperties.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/riff/rifffile.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/riff/rifffile.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/riff/wav/infotag.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/riff/wav/infotag.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/riff/wav/wavfile.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/riff/wav/wavfile.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/riff/wav/wavproperties.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/riff/wav/wavproperties.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/s3m/s3mfile.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/s3m/s3mfile.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/s3m/s3mproperties.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/s3m/s3mproperties.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/tag.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/tag.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/taglib_export.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/tagunion.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/tagunion.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/tagutils.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/tagutils.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/toolkit/taglib.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/toolkit/tbytevector.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/toolkit/tbytevector.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/toolkit/tbytevectorlist.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/toolkit/tbytevectorlist.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/toolkit/tbytevectorstream.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/toolkit/tbytevectorstream.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/toolkit/tdebug.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/toolkit/tdebug.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/toolkit/tdebuglistener.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/toolkit/tdebuglistener.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/toolkit/tfile.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/toolkit/tfile.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/toolkit/tfilestream.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/toolkit/tfilestream.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/toolkit/tiostream.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/toolkit/tiostream.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/toolkit/tlist.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/toolkit/tlist.tcc">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/toolkit/tmap.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/toolkit/tmap.tcc">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/toolkit/tpropertymap.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/toolkit/tpropertymap.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/toolkit/trefcounter.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/toolkit/trefcounter.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/toolkit/tstring.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/toolkit/tstring.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/toolkit/tstringlist.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/toolkit/tstringlist.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/toolkit/tzlib.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/toolkit/tzlib.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/trueaudio/trueaudiofile.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/trueaudio/trueaudiofile.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/trueaudio/trueaudioproperties.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/trueaudio/trueaudioproperties.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/wavpack/wavpackfile.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/wavpack/wavpackfile.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/wavpack/wavpackproperties.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/wavpack/wavpackproperties.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/xm/xmfile.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/xm/xmfile.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/xm/xmproperties.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/xm/xmproperties.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/app/main.cpp">
+			<Option target="utag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/cmake-build-debug/3dparty/taglib/taglib_config.h">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\3dparty\"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\3dparty\taglib\"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/ConfigureChecks.cmake">
+			<Option virtualFolder="CMake Files\3dparty\taglib\"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/Doxyfile.cmake">
+			<Option virtualFolder="CMake Files\3dparty\taglib\"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/cmake_uninstall.cmake.in">
+			<Option virtualFolder="CMake Files\3dparty\taglib\"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/config.h.cmake">
+			<Option virtualFolder="CMake Files\3dparty\taglib\"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib-config.cmake">
+			<Option virtualFolder="CMake Files\3dparty\taglib\"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib.pc.cmake">
+			<Option virtualFolder="CMake Files\3dparty\taglib\"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\3dparty\taglib\taglib\"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/taglib_config.h.cmake">
+			<Option virtualFolder="CMake Files\3dparty\taglib\taglib\"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/taglib/toolkit/taglib.h">
+			<Option virtualFolder="CMake Files\3dparty\taglib\taglib\toolkit\"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/bindings/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\3dparty\taglib\bindings\"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/bindings/c/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\3dparty\taglib\bindings\c\"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/3dparty/taglib/bindings/c/taglib_c.pc.cmake">
+			<Option virtualFolder="CMake Files\3dparty\taglib\bindings\c\"/>
+		</Unit>
+		<Unit filename="/Users/mmasniy/Desktop/utag/app/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\app\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

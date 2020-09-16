@@ -4,6 +4,7 @@
 app/CMakeFiles/utag.dir/main.cpp.o: ../3dparty/taglib/taglib/audioproperties.h
 app/CMakeFiles/utag.dir/main.cpp.o: ../3dparty/taglib/taglib/fileref.h
 app/CMakeFiles/utag.dir/main.cpp.o: ../3dparty/taglib/taglib/tag.h
+app/CMakeFiles/utag.dir/main.cpp.o: ../3dparty/taglib/taglib/taglib_export.h
 app/CMakeFiles/utag.dir/main.cpp.o: ../3dparty/taglib/taglib/toolkit/taglib.h
 app/CMakeFiles/utag.dir/main.cpp.o: ../3dparty/taglib/taglib/toolkit/tbytevector.h
 app/CMakeFiles/utag.dir/main.cpp.o: ../3dparty/taglib/taglib/toolkit/tbytevectorlist.h
@@ -18,7 +19,5 @@ app/CMakeFiles/utag.dir/main.cpp.o: ../3dparty/taglib/taglib/toolkit/trefcounter
 app/CMakeFiles/utag.dir/main.cpp.o: ../3dparty/taglib/taglib/toolkit/tstring.h
 app/CMakeFiles/utag.dir/main.cpp.o: ../3dparty/taglib/taglib/toolkit/tstringlist.h
 app/CMakeFiles/utag.dir/main.cpp.o: ../build/3dparty/taglib/taglib_config.h
-app/CMakeFiles/utag.dir/main.cpp.o: /Users/mmasniy/Desktop/taglib/taglib/tag.h
-app/CMakeFiles/utag.dir/main.cpp.o: /Users/mmasniy/Desktop/taglib/taglib/taglib_export.h
 app/CMakeFiles/utag.dir/main.cpp.o: ../app/main.cpp
 
