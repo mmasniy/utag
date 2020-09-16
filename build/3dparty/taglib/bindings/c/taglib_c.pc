@@ -1,0 +1,12 @@
+prefix=/Users/mmasniy/.brew
+exec_prefix=/Users/mmasniy/.brew
+libdir=/Users/mmasniy/.brew/lib
+includedir=/Users/mmasniy/.brew/include
+
+
+Name: TagLib C Bindings
+Description: Audio meta-data library (C bindings)
+Requires: taglib
+Version: 1.11.1
+Libs: -L/Users/mmasniy/.brew/lib -ltag_c
+Cflags: -I/Users/mmasniy/.brew/include/taglib 
