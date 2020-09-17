@@ -13,12 +13,12 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../app/../3dparty/taglib/taglib"
   "../app/../3dparty/taglib/taglib/toolkit"
   "../app/../build/3dparty/taglib"
-  "../app/src"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
   "/Users/mmasniy/Desktop/utag/build/3dparty/taglib/taglib/CMakeFiles/tag.dir/DependInfo.cmake"
+  "/Users/mmasniy/Desktop/utag/build/app/src/CMakeFiles/app.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

@@ -20,4 +20,6 @@ app/CMakeFiles/utag.dir/main.cpp.o: ../3dparty/taglib/taglib/toolkit/tstring.h
 app/CMakeFiles/utag.dir/main.cpp.o: ../3dparty/taglib/taglib/toolkit/tstringlist.h
 app/CMakeFiles/utag.dir/main.cpp.o: ../build/3dparty/taglib/taglib_config.h
 app/CMakeFiles/utag.dir/main.cpp.o: ../app/main.cpp
+app/CMakeFiles/utag.dir/main.cpp.o: ../app/src/Application.h
+app/CMakeFiles/utag.dir/main.cpp.o: ../app/src/FileTag.h
 

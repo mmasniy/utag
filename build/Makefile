@@ -189,6 +189,19 @@ utag/fast:
 .PHONY : utag/fast
 
 #=============================================================================
+# Target rules for targets named app
+
+# Build rule for target.
+app: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app
+.PHONY : app
+
+# fast build rule for target.
+app/fast:
+	$(MAKE) $(MAKESILENT) -f app/src/CMakeFiles/app.dir/build.make app/src/CMakeFiles/app.dir/build
+.PHONY : app/fast
+
+#=============================================================================
 # Target rules for targets named uninstall
 
 # Build rule for target.
@@ -254,6 +267,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... docs"
 	@echo "... uninstall"
+	@echo "... app"
 	@echo "... tag"
 	@echo "... tag_c"
 	@echo "... utag"

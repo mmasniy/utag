@@ -12,7 +12,7 @@ include_directories(../3dparty/taglib/taglib/)
 include_directories(../3dparty/taglib/taglib/toolkit)
 include_directories(../build/3dparty/taglib/)
 
-include_directories(src)
+add_subdirectory(src)
 
 add_compile_options(
         -std=c++17
@@ -26,4 +26,4 @@ add_compile_options(
 
 set(SOURCE_EXE main.cpp)
 add_executable(utag ${SOURCE_EXE})
-target_link_libraries(utag tag)
+target_link_libraries(utag tag app)

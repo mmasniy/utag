@@ -11,6 +11,13 @@
 /Users/mmasniy/Desktop/utag/build/app/CMakeFiles/rebuild_cache.dir
 /Users/mmasniy/Desktop/utag/build/app/CMakeFiles/edit_cache.dir
 /Users/mmasniy/Desktop/utag/build/app/CMakeFiles/utag.dir
+/Users/mmasniy/Desktop/utag/build/app/src/CMakeFiles/install/local.dir
+/Users/mmasniy/Desktop/utag/build/app/src/CMakeFiles/install/strip.dir
+/Users/mmasniy/Desktop/utag/build/app/src/CMakeFiles/install.dir
+/Users/mmasniy/Desktop/utag/build/app/src/CMakeFiles/list_install_components.dir
+/Users/mmasniy/Desktop/utag/build/app/src/CMakeFiles/rebuild_cache.dir
+/Users/mmasniy/Desktop/utag/build/app/src/CMakeFiles/edit_cache.dir
+/Users/mmasniy/Desktop/utag/build/app/src/CMakeFiles/app.dir
 /Users/mmasniy/Desktop/utag/build/3dparty/CMakeFiles/install/local.dir
 /Users/mmasniy/Desktop/utag/build/3dparty/CMakeFiles/install/strip.dir
 /Users/mmasniy/Desktop/utag/build/3dparty/CMakeFiles/install.dir

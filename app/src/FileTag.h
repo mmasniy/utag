@@ -1,28 +1,24 @@
 #pragma once
 #include <iostream>
+#include <iomanip>
+#include <dirent.h>
 #include <string>
 #include <map>
 
-class FileTag {
+#include "../../taglib/taglib/tag.h"
+#include <../taglib/fileref.h>
+#include <toolkit/tpropertymap.h>
+
+class FileTags {
     public:
-    void setInfo(const std::string& tag, const std::string& info) {
-        m_info_about_file[tag] = info;
-    }
-    std::map<std::string, std::string> getInfoAboutFile() {
-        return m_info_about_file;
-    }
+    FileTags(const std::string& path, const std::string& fileName);
+//    ~FileTags();
+    void setInfo(const std::string& tag, const std::string& info);
+    std::string getTag(const std::string& tag);
+    [[nodiscard]] std::map<std::string, std::string> getAllInfo() const;
+    void upgradeFileTags(const FileTags& new_tags);
+    friend std::ostream& operator<<(std::ostream& out, const FileTags& file);
     private:
-    std::map<std::string, std::string> m_info_about_file;
-    /*
-    std::string file_name;
-    std::string song_name;
-    std::string artist;
-    std::string title;
-    std::string album;
-    std::string genre;
-    std::string audioFilePath;
-    std::string type;
-    std::string year;
-    std::string track_number;
-    */
+    TagLib::FileRef fileRef;
+    std::map<std::string, std::string> m_file_tags;
 };

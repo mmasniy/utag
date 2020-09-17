@@ -55,6 +55,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../3dparty/taglib/taglib/toolkit/taglib.h"
   "../CMakeLists.txt"
   "../app/CMakeLists.txt"
+  "../app/src/CMakeLists.txt"
   "CMakeFiles/3.18.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.18.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.18.2/CMakeSystem.cmake"
@@ -70,6 +71,7 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "app/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "app/src/CMakeFiles/CMakeDirectoryInformation.cmake"
   "3dparty/CMakeFiles/CMakeDirectoryInformation.cmake"
   "3dparty/taglib/taglib.h.stamp"
   "3dparty/taglib/taglib-config"
@@ -88,6 +90,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "app/CMakeFiles/utag.dir/DependInfo.cmake"
+  "app/src/CMakeFiles/app.dir/DependInfo.cmake"
   "3dparty/taglib/CMakeFiles/uninstall.dir/DependInfo.cmake"
   "3dparty/taglib/CMakeFiles/docs.dir/DependInfo.cmake"
   "3dparty/taglib/taglib/CMakeFiles/tag.dir/DependInfo.cmake"

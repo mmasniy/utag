@@ -99,6 +99,7 @@ utag_EXTERNAL_OBJECTS =
 app/utag: app/CMakeFiles/utag.dir/main.cpp.o
 app/utag: app/CMakeFiles/utag.dir/build.make
 app/utag: 3dparty/taglib/taglib/libtag.a
+app/utag: app/src/libapp.a
 app/utag: /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/lib/libz.tbd
 app/utag: app/CMakeFiles/utag.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/mmasniy/Desktop/utag/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable utag"

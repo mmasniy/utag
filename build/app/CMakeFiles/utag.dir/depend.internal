@@ -21,3 +21,5 @@ app/CMakeFiles/utag.dir/main.cpp.o
  ../3dparty/taglib/taglib/toolkit/tstringlist.h
  ../build/3dparty/taglib/taglib_config.h
  /Users/mmasniy/Desktop/utag/app/main.cpp
+ /Users/mmasniy/Desktop/utag/app/src/Application.h
+ /Users/mmasniy/Desktop/utag/app/src/FileTag.h
