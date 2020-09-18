@@ -1,2 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/ar qc libapp.a CMakeFiles/app.dir/Application.cpp.o CMakeFiles/app.dir/FileTag.cpp.o
-/Library/Developer/CommandLineTools/usr/bin/ranlib libapp.a
