@@ -1,19 +1,33 @@
-#pragma once
+#ifndef MAINWINDOW_H
+#define MAINWINDOW_H
 
-#include <QFileSystemModel>
-#include <QDialog>
+#include <QMainWindow>
 #include <QtCore>
 #include <QtGui>
+#include <QFileSystemModel>
 
-class Dialog : public QDialog {
+//QT_BEGIN_NAMESPACE
+//namespace Ui { class MainWindow; }
+//QT_END_NAMESPACE
+
+
+class MainWindow : public QMainWindow
+{
     Q_OBJECT
 
     public:
-    explicit Dialog(QWidget *parent = 0);
-    ~Dialog();
+    MainWindow(QWidget *parent = nullptr);
+    ~MainWindow();
+
+    private slots:
+    void on_treeView_clicked(const QModelIndex &index);
+
+    void on_listView_clicked(const QModelIndex &index);
 
     private:
-    Dialog *ui;
+    MainWindow *ui;
     QFileSystemModel *dirmodel;
     QFileSystemModel *filemodel;
+
 };
+#endif // MAINWINDOW_H

@@ -1,7 +1,19 @@
-cmake_minimum_required(VERSION 3.17.3)
+#cmake_minimum_required(VERSION 3.17.3)
+#
+#set(NAME app)
+#
+#file(GLOB SOURCE *.cpp)
+#
+#add_library(${NAME} STATIC ${SOURCE})
+function(custom_add_library_from_dir TARGET)
+    SUBDIRLIST(SUBDIRS ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_SOURCE_DIR})
 
-set(NAME app)
+    FOREACH(subdir ${SUBDIRS})
+        aux_source_directory(${subdir} SOURCE_LIB)
+    ENDFOREACH()
 
-file(GLOB SOURCE *.cpp)
+    add_library(${TARGET} STATIC ${SOURCE_LIB})
+endfunction()
 
-add_library(${NAME} STATIC ${SOURCE})
+custom_add_library_from_dir("src_lib")
+target_link_libraries(src_lib Qt5::Core Qt5::Qml Qt5::Widgets)
