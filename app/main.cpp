@@ -3,20 +3,22 @@
 #include <iostream>
 #include <dirent.h>
 
-#include "src/Application.h"
+#include "src/mainwindow.h"
+
 #include <QApplication>
-#include <QLabel>
 int main( int argc, char **argv )
 {
-    QApplication a( argc, argv );
-    QLabel label("Привет");
+    QApplication app( argc, argv );
+    MainWindow window((QString(argv[1])));
+//    QLabel label("Привет");
 //    QPushButton hello( "Hello world!", 0 );
 //    hello.resize( 100, 30 );
 
 //    a.setMainWidget( &hello );
 //    hello.show();
-    label.show();
-    return a.exec();
+//    label.show();
+    window.show();
+    return app.exec();
 }
 
 //int main(int argc, char *argv[]) {
