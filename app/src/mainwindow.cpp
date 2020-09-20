@@ -23,7 +23,7 @@ MainWindow::MainWindow(QString sPath, QWidget *parent) : QMainWindow(parent), ui
     filemodel->setNameFilterDisables(false);
 
     ui->listView->setModel(filemodel);
-    ui->treeView->setRootIndex(dirmodel->index(sPath));
+    ui->listView->setRootIndex(filemodel->index(sPath));
 }
 
 MainWindow::~MainWindow() {
