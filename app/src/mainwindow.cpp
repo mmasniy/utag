@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "FileTag.h"
 
 MainWindow::MainWindow(QString sPath, QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
@@ -22,8 +23,11 @@ MainWindow::MainWindow(QString sPath, QWidget *parent) : QMainWindow(parent), ui
     filemodel->setNameFilters(QStringList() << "*.mp3" << "*.flac" << "*.waw" << "*.ogg" << "*.aif");
     filemodel->setNameFilterDisables(false);
 
-    ui->listView->setModel(filemodel);
-    ui->listView->setRootIndex(filemodel->index(sPath));
+//    ui->tableView->setModel(filemodel);
+//    ui->tableView->setRootIndex(filemodel->index(sPath));
+//    ui->tableView->setEditTriggers((QAbstractItemView::editTriggers()));
+//    ui->tableView->editTriggers();
+//    ui->tableWidget->UpdateTable();
 }
 
 MainWindow::~MainWindow() {
@@ -33,5 +37,11 @@ MainWindow::~MainWindow() {
 
 void MainWindow::on_treeView_clicked(const QModelIndex &index) {
     QString sPath = dirmodel->fileInfo(index).absoluteFilePath();
-    ui->listView->setRootIndex(filemodel->setRootPath(sPath));
+//    ui->tableView->setRootIndex(filemodel->setRootPath(sPath));
+}
+
+void MainWindow::on_listView_clicked(const QModelIndex &index) {
+//    std::string path = filemodel->fileInfo(index).absoluteFilePath().toStdString();
+//    FileTags file(path);
+
 }

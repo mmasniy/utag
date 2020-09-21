@@ -13,6 +13,8 @@ FileTags::FileTags(const std::string &path, const std::string &fileName) {
         this->setInfo("album", tag->album().toCString());
         this->setInfo("comment", tag->comment().toCString());
         this->setInfo("genre", tag->genre().toCString());
+        this->setInfo("year", std::to_string(tag->year()));
+        this->setInfo("track_number", std::to_string(tag->track()));
     }
 }
 

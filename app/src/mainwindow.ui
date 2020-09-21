@@ -6,240 +6,170 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>880</width>
-    <height>715</height>
+    <width>1718</width>
+    <height>673</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTreeView" name="treeView">
+   <widget class="QWidget" name="horizontalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>0</x>
+      <x>10</x>
       <y>10</y>
-      <width>431</width>
-      <height>311</height>
+      <width>1121</width>
+      <height>611</height>
      </rect>
     </property>
+    <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,6">
+     <item>
+      <widget class="QTreeView" name="treeView"/>
+     </item>
+     <item>
+      <widget class="QTableWidget" name="tableWidget"/>
+     </item>
+    </layout>
    </widget>
-   <widget class="QListView" name="listView">
+   <widget class="QWidget" name="formLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>450</x>
-      <y>10</y>
-      <width>431</width>
-      <height>311</height>
+      <x>1150</x>
+      <y>260</y>
+      <width>451</width>
+      <height>251</height>
      </rect>
     </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>350</y>
-      <width>120</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 75 24pt  &quot;Monaco&quot;;</string>
-    </property>
-    <property name="text">
-     <string>Artist</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>390</y>
-      <width>120</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 75 24pt  &quot;Monaco&quot;;</string>
-    </property>
-    <property name="text">
-     <string>Title</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_3">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>430</y>
-      <width>120</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 75 24pt  &quot;Monaco&quot;;</string>
-    </property>
-    <property name="text">
-     <string>Album</string>
-    </property>
+    <layout class="QFormLayout" name="formLayout_2">
+     <property name="horizontalSpacing">
+      <number>-1</number>
+     </property>
+     <property name="verticalSpacing">
+      <number>-1</number>
+     </property>
+     <item row="0" column="1">
+      <widget class="QPlainTextEdit" name="artist"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+font: 14pt &quot;Monaco&quot;;
+</string>
+       </property>
+       <property name="text">
+        <string>Title</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QPlainTextEdit" name="title"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+font: 14pt &quot;Monaco&quot;;
+</string>
+       </property>
+       <property name="text">
+        <string>Album</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QPlainTextEdit" name="album"/>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_6">
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+font: 14pt &quot;Monaco&quot;;
+</string>
+       </property>
+       <property name="text">
+        <string>Genre</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QPlainTextEdit" name="genre"/>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="label_7">
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+font: 14pt &quot;Monaco&quot;;
+</string>
+       </property>
+       <property name="text">
+        <string>Year</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QPlainTextEdit" name="year"/>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="label_8">
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+font: 14pt &quot;Monaco&quot;;
+</string>
+       </property>
+       <property name="text">
+        <string>Track Number</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QPlainTextEdit" name="trackNumber"/>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLabel" name="label_5">
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+font: 14pt &quot;Monaco&quot;;
+</string>
+       </property>
+       <property name="text">
+        <string>Audio File Path</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QPlainTextEdit" name="audioFilePath"/>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+font: 14pt &quot;Monaco&quot;;
+</string>
+       </property>
+       <property name="text">
+        <string>Artist</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>470</y>
-      <width>120</width>
-      <height>30</height>
+      <x>1150</x>
+      <y>10</y>
+      <width>441</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 75 24pt  &quot;Monaco&quot;;</string>
+     <string notr="true">color: rgb(255, 255, 255);
+font: 24pt &quot;Monaco&quot;;</string>
     </property>
     <property name="text">
-     <string>НОмер</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_5">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>630</y>
-      <width>291</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 75 24pt  &quot;Monaco&quot;;</string>
-    </property>
-    <property name="text">
-     <string>Audio File Path</string>
-    </property>
-   </widget>
-   <widget class="QPlainTextEdit" name="plainTextEdit">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>350</y>
-      <width>251</width>
-      <height>31</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QPlainTextEdit" name="plainTextEdit_2">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>390</y>
-      <width>251</width>
-      <height>31</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QPlainTextEdit" name="plainTextEdit_3">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>430</y>
-      <width>251</width>
-      <height>31</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QPlainTextEdit" name="plainTextEdit_4">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>470</y>
-      <width>251</width>
-      <height>31</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QPlainTextEdit" name="plainTextEdit_5">
-    <property name="geometry">
-     <rect>
-      <x>310</x>
-      <y>630</y>
-      <width>541</width>
-      <height>31</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_6">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>510</y>
-      <width>120</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 75 24pt  &quot;Monaco&quot;;</string>
-    </property>
-    <property name="text">
-     <string>Genre</string>
-    </property>
-   </widget>
-   <widget class="QPlainTextEdit" name="plainTextEdit_6">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>510</y>
-      <width>251</width>
-      <height>31</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_7">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>550</y>
-      <width>120</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 75 24pt  &quot;Monaco&quot;;</string>
-    </property>
-    <property name="text">
-     <string>Year</string>
-    </property>
-   </widget>
-   <widget class="QPlainTextEdit" name="plainTextEdit_7">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>550</y>
-      <width>251</width>
-      <height>31</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_8">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>590</y>
-      <width>181</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 75 24pt  &quot;Monaco&quot;;</string>
-    </property>
-    <property name="text">
-     <string>Track Number</string>
-    </property>
-   </widget>
-   <widget class="QPlainTextEdit" name="plainTextEdit_8">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>590</y>
-      <width>251</width>
-      <height>31</height>
-     </rect>
+     <string>Information about file:</string>
     </property>
    </widget>
   </widget>
@@ -248,7 +178,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>880</width>
+     <width>1718</width>
      <height>22</height>
     </rect>
    </property>
