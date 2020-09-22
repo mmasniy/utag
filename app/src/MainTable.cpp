@@ -35,11 +35,9 @@ void MainTable::setApp(const QModelIndex &index, const QString& sPath) {
 
     QStringList list = dirent.entryList();
     for (auto& i : list) {
-//        std::cout << i.toStdString() << std::endl;
         FileTags file(sPath.toStdString() + "/", i);
         app->setFileToInfo(file);
     }
-//    app->printInfo();
     m_application = app;
 }
 

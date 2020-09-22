@@ -2,13 +2,28 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1961</width>
-    <height>697</height>
+    <width>1400</width>
+    <height>670</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1400</width>
+    <height>670</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1400</width>
+    <height>670</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
@@ -19,16 +34,35 @@
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>1341</width>
+      <width>901</width>
       <height>611</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,6">
      <item>
-      <widget class="QTreeView" name="treeView"/>
+      <layout class="QVBoxLayout" name="verticalLayout" stretch="3,2">
+       <item>
+        <widget class="QTreeView" name="treeView"/>
+       </item>
+       <item>
+        <widget class="QTextBrowser" name="textBrowser"/>
+       </item>
+      </layout>
      </item>
      <item>
       <widget class="MainTable" name="tableWidget">
+       <property name="verticalScrollBarPolicy">
+        <enum>Qt::ScrollBarAlwaysOn</enum>
+       </property>
+       <property name="editTriggers">
+        <set>QAbstractItemView::DoubleClicked</set>
+       </property>
+       <property name="alternatingRowColors">
+        <bool>true</bool>
+       </property>
+       <property name="selectionMode">
+        <enum>QAbstractItemView::MultiSelection</enum>
+       </property>
        <property name="sortingEnabled">
         <bool>true</bool>
        </property>
@@ -62,137 +96,14 @@
        </column>
        <column>
         <property name="text">
-         <string>Year</string>
+         <string>Genre</string>
         </property>
        </column>
        <column>
         <property name="text">
-         <string>File Path</string>
+         <string>Year</string>
         </property>
        </column>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="formLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>670</x>
-      <y>930</y>
-      <width>451</width>
-      <height>251</height>
-     </rect>
-    </property>
-    <layout class="QFormLayout" name="formLayout_2">
-     <property name="horizontalSpacing">
-      <number>-1</number>
-     </property>
-     <property name="verticalSpacing">
-      <number>-1</number>
-     </property>
-     <item row="0" column="1">
-      <widget class="QPlainTextEdit" name="artist"/>
-     </item>
-     <item row="1" column="0">
-      <widget class="QLabel" name="label_2">
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);
-font: 14pt &quot;Monaco&quot;;
-</string>
-       </property>
-       <property name="text">
-        <string>Title</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="1">
-      <widget class="QPlainTextEdit" name="title"/>
-     </item>
-     <item row="2" column="0">
-      <widget class="QLabel" name="label_3">
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);
-font: 14pt &quot;Monaco&quot;;
-</string>
-       </property>
-       <property name="text">
-        <string>Album</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="1">
-      <widget class="QPlainTextEdit" name="album"/>
-     </item>
-     <item row="3" column="0">
-      <widget class="QLabel" name="label_6">
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);
-font: 14pt &quot;Monaco&quot;;
-</string>
-       </property>
-       <property name="text">
-        <string>Genre</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="1">
-      <widget class="QPlainTextEdit" name="genre"/>
-     </item>
-     <item row="4" column="0">
-      <widget class="QLabel" name="label_7">
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);
-font: 14pt &quot;Monaco&quot;;
-</string>
-       </property>
-       <property name="text">
-        <string>Year</string>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="1">
-      <widget class="QPlainTextEdit" name="year"/>
-     </item>
-     <item row="5" column="0">
-      <widget class="QLabel" name="label_8">
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);
-font: 14pt &quot;Monaco&quot;;
-</string>
-       </property>
-       <property name="text">
-        <string>Track Number</string>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="1">
-      <widget class="QPlainTextEdit" name="trackNumber"/>
-     </item>
-     <item row="6" column="0">
-      <widget class="QLabel" name="label_5">
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);
-font: 14pt &quot;Monaco&quot;;
-</string>
-       </property>
-       <property name="text">
-        <string>Audio File Path</string>
-       </property>
-      </widget>
-     </item>
-     <item row="6" column="1">
-      <widget class="QPlainTextEdit" name="audioFilePath"/>
-     </item>
-     <item row="0" column="0">
-      <widget class="QLabel" name="label">
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);
-font: 14pt &quot;Monaco&quot;;
-</string>
-       </property>
-       <property name="text">
-        <string>Artist</string>
-       </property>
       </widget>
      </item>
     </layout>
@@ -200,9 +111,9 @@ font: 14pt &quot;Monaco&quot;;
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>670</x>
-      <y>680</y>
-      <width>441</width>
+      <x>990</x>
+      <y>10</y>
+      <width>331</width>
       <height>31</height>
      </rect>
     </property>
@@ -214,24 +125,79 @@ font: 24pt &quot;Monaco&quot;;</string>
      <string>Information about file:</string>
     </property>
    </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>920</x>
+      <y>570</y>
+      <width>471</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="0,8,0">
+     <item>
+      <widget class="QLabel" name="label_5">
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+font: 14pt &quot;Monaco&quot;;
+</string>
+       </property>
+       <property name="text">
+        <string>File Path</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTextBrowser" name="textBrowser_2"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>Save Changes</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1961</width>
+     <width>1400</width>
      <height>22</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen_Folder"/>
+    <addaction name="actionHelp"/>
+   </widget>
+   <addaction name="menuFile"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionOpen_Folder">
+   <property name="text">
+    <string>Open Folder</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="text">
+    <string>Help</string>
+   </property>
+  </action>
  </widget>
  <customwidgets>
   <customwidget>
    <class>MainTable</class>
    <extends>QTableWidget</extends>
-   <header>Maintable.h</header>
+   <header>MainTable.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

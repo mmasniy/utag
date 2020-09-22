@@ -15,6 +15,10 @@ class MainTable : public QTableWidget {
     ~MainTable() override;
     protected:
 
+    public slots:
+
+    signals:
+
     private:
     Application *m_application;
 };

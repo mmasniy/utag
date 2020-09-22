@@ -13,11 +13,49 @@ MainWindow::MainWindow(QString sPath, QWidget *parent) : QMainWindow(parent), ui
 
     ui->treeView->setModel(dirmodel);
     ui->treeView->setRootIndex(dirmodel->index(sPath));
+    ui->textBrowser->setPlainText("Logger:\n");
+    ui->textBrowser_2->setPlainText("Choose directory!");
 
     for(int i = 1; i < dirmodel->columnCount(); ++i) {
         ui->treeView->hideColumn(i);
     }
     ui->tableWidget->setTable(dirmodel->index(sPath), sPath);
+}
+
+MainWindow::~MainWindow() {
+    delete ui;
+}
+
+
+void MainWindow::on_treeView_clicked(const QModelIndex &index) {
+    QString sPath = dirmodel->fileInfo(index).absoluteFilePath();
+    ui->tableWidget->clearTable();
+    ui->tableWidget->setTable(index, sPath);
+    ui->textBrowser_2->setPlainText(sPath);
+    auto list = ui->tableWidget->selectedItems();
+    for (auto& i : list) {
+        std::cout << i << std::endl;
+    }
+}
+void MainWindow::checkDirPermitions(QString &sPath) {
+    QDir dir(sPath);
+//    if ()
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //    dir = new QDir(sPath);
 //    dir->setFilter(QDir::NoDotAndDotDot | QDir::Files);
 //    dir->setNameFilters(QStringList() << "*.mp3" << "*.flac" << "*.waw" << "*.ogg" << "*.aif");
@@ -35,20 +73,10 @@ MainWindow::MainWindow(QString sPath, QWidget *parent) : QMainWindow(parent), ui
 //    filemodel->setNameFilterDisables(false);
 
 
-//    ui->tableView->setModel(filemodel);
+
 //    ui->tableView->setRootIndex(filemodel->index(sPath));
 //    ui->tableView->setEditTriggers((QAbstractItemView::editTriggers()));
 //    ui->tableView->editTriggers();
 //    ui->tableWidget->UpdateTable();
-}
-
-MainWindow::~MainWindow() {
-    delete ui;
-}
 
 
-void MainWindow::on_treeView_clicked(const QModelIndex &index) {
-    QString sPath = dirmodel->fileInfo(index).absoluteFilePath();
-    ui->tableWidget->clearTable();
-    ui->tableWidget->setTable(index, sPath);
-}
