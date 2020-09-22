@@ -17,7 +17,7 @@ MainWindow::MainWindow(QString sPath, QWidget *parent) : QMainWindow(parent), ui
     for(int i = 1; i < dirmodel->columnCount(); ++i) {
         ui->treeView->hideColumn(i);
     }
-    ui->tableWidget->setTable();
+    ui->tableWidget->setTable(dirmodel->index(sPath), sPath);
 //    dir = new QDir(sPath);
 //    dir->setFilter(QDir::NoDotAndDotDot | QDir::Files);
 //    dir->setNameFilters(QStringList() << "*.mp3" << "*.flac" << "*.waw" << "*.ogg" << "*.aif");
@@ -49,10 +49,6 @@ MainWindow::~MainWindow() {
 
 void MainWindow::on_treeView_clicked(const QModelIndex &index) {
     QString sPath = dirmodel->fileInfo(index).absoluteFilePath();
+    ui->tableWidget->clearTable();
+    ui->tableWidget->setTable(index, sPath);
 }
-
-//void MainWindow::on_listView_clicked(const QModelIndex &index) {
-////    std::string path = filemodel->fileInfo(index).absoluteFilePath().toStdString();
-////    FileTags file(path);
-//
-//}

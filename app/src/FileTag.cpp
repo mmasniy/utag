@@ -1,9 +1,9 @@
 #include "FileTag.h"
 
-FileTags::FileTags(const std::string &path, const std::string &fileName) {
-    std::string fullPath(path + fileName);
+FileTags::FileTags(const std::string &path, QString &fileName) {
+    std::string fullPath(path + fileName.toStdString());
     this->setInfo("filename", fileName);
-    this->setInfo("path", fullPath);
+    this->setInfo("path", QString::fromStdString(fullPath));
     TagLib::FileRef f(fullPath.c_str());
     fileRef = f;
     if (!f.isNull() && f.tag()) {
@@ -11,39 +11,40 @@ FileTags::FileTags(const std::string &path, const std::string &fileName) {
         this->setInfo("title", tag->title().toCString());
         this->setInfo("artist", tag->artist().toCString());
         this->setInfo("album", tag->album().toCString());
-        this->setInfo("comment", tag->comment().toCString());
+//        this->setInfo("comment", tag->comment().toCString());
         this->setInfo("genre", tag->genre().toCString());
-        this->setInfo("year", std::to_string(tag->year()));
-        this->setInfo("track_number", std::to_string(tag->track()));
+        this->setInfo("year", QString::number(tag->year()));
+        this->setInfo("track_number", QString::number(tag->track()));
     }
 }
 
 std::ostream &operator<<(std::ostream &out, const FileTags &file) {
     for(const auto& [key, value] : file.getAllInfo()) {
-        std::cout << key << ": " << value << std::endl;
+        std::cout << key << ": " << value.toStdString() << std::endl;
     }
     return out;
 }
 
-void FileTags::setInfo(const std::string &tag, const std::string &info) {
+void FileTags::setInfo(const std::string &tag, const QString &info) {
     m_file_tags[tag] = info;
 }
-std::string FileTags::getTag(const std::string &tag){
+QString FileTags::getTag(const std::string &tag){
     return m_file_tags[tag];
 }
-std::map<std::string, std::string> FileTags::getAllInfo() const {
+std::map<std::string, QString> FileTags::getAllInfo() const {
     return m_file_tags;
 }
 void FileTags::upgradeFileTags(const FileTags &new_tags) {
-    TagLib::Tag *tag = fileRef.tag();
-    tag->setTitle(new_tags.getAllInfo()["title"]);
+    TagLib::FileRef file(new_tags.getAllInfo()["path"].toStdString().c_str());
+    file.tag()->setTitle(new_tags.getAllInfo()["title"].toStdString());
     setInfo("title", new_tags.getAllInfo()["title"]);
-    tag->setArtist(new_tags.getAllInfo()["artist"]);
+    file.tag()->setArtist(new_tags.getAllInfo()["artist"].toStdString());
     setInfo("artist", new_tags.getAllInfo()["artist"]);
-    tag->setAlbum(new_tags.getAllInfo()["album"]);
+    file.tag()->setAlbum(new_tags.getAllInfo()["album"].toStdString());
     setInfo("album", new_tags.getAllInfo()["album"]);
-    tag->setComment(new_tags.getAllInfo()["comment"]);
+    file.tag()->setComment(new_tags.getAllInfo()["comment"].toStdString());
     setInfo("comment", new_tags.getAllInfo()["comment"]);
-    tag->setGenre(new_tags.getAllInfo()["genre"]);
+    file.tag()->setGenre(new_tags.getAllInfo()["genre"].toStdString());
     setInfo("genre", new_tags.getAllInfo()["genre"]);
+    file.save();
 }

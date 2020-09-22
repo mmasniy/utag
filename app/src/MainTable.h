@@ -11,8 +11,10 @@ class MainTable : public QTableWidget {
     explicit MainTable(QWidget *parent = nullptr);
     void setTable(const QModelIndex &index, const QString& sPath);
     void setApp(const QModelIndex &index, const QString& sPath);
+    void clearTable();
+    ~MainTable() override;
     protected:
 
     private:
-    Application m_application;
+    Application *m_application;
 };

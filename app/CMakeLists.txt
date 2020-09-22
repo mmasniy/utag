@@ -27,7 +27,7 @@ set(UI src/mainwindow.ui)
 
 add_executable(utag ${SOURCES} ${HEADERS} ${UI})
 
-add_subdirectory(src)
+#add_subdirectory(src)
 include_directories(./src)
 
 target_link_libraries(utag tag Qt5::Core Qt5::Widgets)

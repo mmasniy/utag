@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1718</width>
-    <height>673</height>
+    <width>1961</width>
+    <height>697</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,7 +19,7 @@
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>1121</width>
+      <width>1341</width>
       <height>611</height>
      </rect>
     </property>
@@ -28,15 +28,57 @@
       <widget class="QTreeView" name="treeView"/>
      </item>
      <item>
-      <widget class="QTableWidget" name="tableWidget"/>
+      <widget class="MainTable" name="tableWidget">
+       <property name="sortingEnabled">
+        <bool>true</bool>
+       </property>
+       <attribute name="horizontalHeaderDefaultSectionSize">
+        <number>150</number>
+       </attribute>
+       <column>
+        <property name="text">
+         <string>File Name</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Title</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Artist</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Album</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Track Number</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Year</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>File Path</string>
+        </property>
+       </column>
+      </widget>
      </item>
     </layout>
    </widget>
    <widget class="QWidget" name="formLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>1150</x>
-      <y>260</y>
+      <x>670</x>
+      <y>930</y>
       <width>451</width>
       <height>251</height>
      </rect>
@@ -158,8 +200,8 @@ font: 14pt &quot;Monaco&quot;;
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>1150</x>
-      <y>10</y>
+      <x>670</x>
+      <y>680</y>
       <width>441</width>
       <height>31</height>
      </rect>
@@ -178,13 +220,20 @@ font: 24pt &quot;Monaco&quot;;</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1718</width>
+     <width>1961</width>
      <height>22</height>
     </rect>
    </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MainTable</class>
+   <extends>QTableWidget</extends>
+   <header>Maintable.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

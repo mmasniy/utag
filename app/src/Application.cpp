@@ -12,8 +12,12 @@ void Application::setFileToInfo(const FileTags &infoAboutFile) {
 
 void Application::setTag(const std::string& nameOfFile, const std::string& nameOfTag, const std::string& content) {
     auto iter = find_if(m_info.begin(), m_info.end(), [&](FileTags& file) {
-        return file.getTag("filename") == nameOfFile;
+        return file.getTag("filename") == QString::fromStdString(nameOfFile);
     });
 
-    iter->setInfo(nameOfTag, content);
+    iter->setInfo(nameOfTag, QString::fromStdString(content));
+}
+
+std::vector<FileTags> &Application::getTagsInfo() {
+    return m_info;
 }
