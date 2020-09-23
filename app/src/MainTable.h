@@ -20,5 +20,5 @@ class MainTable : public QTableWidget {
     signals:
 
     private:
-    Application *m_application;
+    Application m_application;
 };

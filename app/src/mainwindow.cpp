@@ -14,7 +14,7 @@ MainWindow::MainWindow(QString sPath, QWidget *parent) : QMainWindow(parent), ui
     ui->treeView->setModel(dirmodel);
     ui->treeView->setRootIndex(dirmodel->index(sPath));
     ui->textBrowser->setPlainText("Logger:\n");
-    ui->textBrowser_2->setPlainText("Choose directory!");
+//    ui->textBrowser_2->setPlainText("Choose directory!");
 
     for(int i = 1; i < dirmodel->columnCount(); ++i) {
         ui->treeView->hideColumn(i);
@@ -31,12 +31,31 @@ void MainWindow::on_treeView_clicked(const QModelIndex &index) {
     QString sPath = dirmodel->fileInfo(index).absoluteFilePath();
     ui->tableWidget->clearTable();
     ui->tableWidget->setTable(index, sPath);
-    ui->textBrowser_2->setPlainText(sPath);
+//    ui->textBrowser_2->setPlainText(sPath);
     auto list = ui->tableWidget->selectedItems();
     for (auto& i : list) {
         std::cout << i << std::endl;
     }
 }
+
+void MainWindow::on_pushButton_2_clicked() {
+    std::cout << "1" << std::endl;
+    QString sPath = ui->plainTextEdit->toPlainText();
+    std::cout << "2" << std::endl;
+    ui->tableWidget->clearTable();
+    std::cout << "3" << std::endl;
+    ui->tableWidget->setTable(dirmodel->index(sPath), sPath);
+//    ui->textBrowser_2->setPlainText(sPath);
+    std::cout << "4" << std::endl;
+    auto list = ui->tableWidget->selectedItems();
+    std::cout << "5" << std::endl;
+    for (auto& i : list) {
+        std::cout << "PATH: ";
+        std::cout << i << std::endl;
+    }
+    std::cout << "6" << std::endl;
+}
+
 void MainWindow::checkDirPermitions(QString &sPath) {
     QDir dir(sPath);
 //    if ()

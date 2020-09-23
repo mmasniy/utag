@@ -3,7 +3,7 @@
 
 void MainTable::setTable(const QModelIndex &index, const QString& sPath) {
     setApp(index, sPath);
-    for (const auto& i : m_application->getTagsInfo()) {
+    for (const auto& i : m_application.getTagsInfo()) {
         auto *year = new QTableWidgetItem();
         auto *absPath = new QTableWidgetItem(i.getAllInfo()["path"]);
 
@@ -27,7 +27,7 @@ MainTable::MainTable(QWidget *parent) : QTableWidget(parent) {
 
 void MainTable::setApp(const QModelIndex &index, const QString& sPath) {
     std::cout << sPath.toStdString() << std::endl;
-    Application *app = new Application;
+    Application app;
 
     QDir dirent(sPath);
     dirent.setFilter(QDir::NoDotAndDotDot | QDir::Files);
@@ -36,14 +36,14 @@ void MainTable::setApp(const QModelIndex &index, const QString& sPath) {
     QStringList list = dirent.entryList();
     for (auto& i : list) {
         FileTags file(sPath.toStdString() + "/", i);
-        app->setFileToInfo(file);
+        app.setFileToInfo(file);
     }
     m_application = app;
 }
 
 MainTable::~MainTable() {
-    delete m_application;
 }
+
 void MainTable::clearTable() {
     model()->removeRows(0, rowCount());
 }
