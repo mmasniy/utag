@@ -13,7 +13,7 @@ MainWindow::MainWindow(QString sPath, QWidget *parent) : QMainWindow(parent), ui
 
     ui->treeView->setModel(dirmodel);
     ui->treeView->setRootIndex(dirmodel->index(sPath));
-    ui->textBrowser->setPlainText("Logger:\n");
+    ui->textBrowser->insertPlainText(QTime::currentTime().toString() + " : start program Utag\n");
 //    ui->textBrowser_2->setPlainText("Choose directory!");
 
     for(int i = 1; i < dirmodel->columnCount(); ++i) {
@@ -30,31 +30,30 @@ MainWindow::~MainWindow() {
 void MainWindow::on_treeView_clicked(const QModelIndex &index) {
     QString sPath = dirmodel->fileInfo(index).absoluteFilePath();
     ui->tableWidget->clearTable();
+    ui->textBrowser->insertPlainText(QTime::currentTime().toString() + " : table cleared\n");
     ui->tableWidget->setTable(index, sPath);
+    ui->textBrowser->insertPlainText(QTime::currentTime().toString() + " : folder changed to " + sPath + "\n");
 //    ui->textBrowser_2->setPlainText(sPath);
-    auto list = ui->tableWidget->selectedItems();
-    for (auto& i : list) {
-        std::cout << i << std::endl;
-    }
+//    auto list = ui->tableWidget->selectedItems();
+//    for (auto& i : list) {
+//        std::cout << i << std::endl;
+//    }
 }
 
 void MainWindow::on_pushButton_2_clicked() {
-    std::cout << "1" << std::endl;
     QString sPath = ui->plainTextEdit->toPlainText();
-    std::cout << "2" << std::endl;
-    ui->tableWidget->clearTable();
-    std::cout << "3" << std::endl;
-    ui->tableWidget->setTable(dirmodel->index(sPath), sPath);
-//    ui->textBrowser_2->setPlainText(sPath);
-    std::cout << "4" << std::endl;
-    auto list = ui->tableWidget->selectedItems();
-    std::cout << "5" << std::endl;
-    for (auto& i : list) {
-        std::cout << "PATH: ";
-        std::cout << i << std::endl;
+    if (!sPath.toStdString().empty()) {
+        ui->tableWidget->clearTable();
+        ui->tableWidget->setTable(dirmodel->index(sPath), sPath);
+        ui->treeView->setModel(dirmodel);
+        ui->treeView->setRootIndex(dirmodel->index(sPath));
+        ui->textBrowser->insertPlainText(
+            QTime::currentTime().toString() + " : folder changed to " + sPath
+                + "\n");
     }
-    std::cout << "6" << std::endl;
 }
+
+
 
 void MainWindow::checkDirPermitions(QString &sPath) {
     QDir dir(sPath);

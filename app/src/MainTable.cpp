@@ -6,12 +6,14 @@ void MainTable::setTable(const QModelIndex &index, const QString& sPath) {
     for (const auto& i : m_application.getTagsInfo()) {
         auto *year = new QTableWidgetItem();
         auto *absPath = new QTableWidgetItem(i.getAllInfo()["path"]);
+        auto *fileName = new QTableWidgetItem(i.getAllInfo()["filename"]);
 
         if (i.getAllInfo()["year"] != 0)
             year->setData(Qt::EditRole, i.getAllInfo()["year"]);
-//        absPath->setFlags(absPath->flags() ^ Qt::ItemIsEditable ^ Qt::ItemIsSelectable);
+        absPath->setFlags(absPath->flags() ^ Qt::ItemIsEditable ^ Qt::ItemIsSelectable);
+        fileName->setFlags(fileName->flags() ^ Qt::ItemIsEditable ^ Qt::ItemIsSelectable);
         insertRow(rowCount());
-        setItem(rowCount() - 1, 0, new QTableWidgetItem(i.getAllInfo()["filename"]));
+        setItem(rowCount() - 1, 0, fileName);
         setItem(rowCount() - 1, 1, new QTableWidgetItem(i.getAllInfo()["title"]));
         setItem(rowCount() - 1, 2, new QTableWidgetItem(i.getAllInfo()["artist"]));
         setItem(rowCount() - 1, 3, new QTableWidgetItem(i.getAllInfo()["album"]));
