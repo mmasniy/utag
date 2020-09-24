@@ -40,7 +40,7 @@ void MainWindow::on_treeView_clicked(const QModelIndex &index) {
 //    }
 }
 
-void MainWindow::on_pushButton_2_clicked() {
+void MainWindow::on_changeDir_clicked() {
     QString sPath = ui->plainTextEdit->toPlainText();
     if (!sPath.toStdString().empty()) {
         ui->tableWidget->clearTable();
@@ -54,47 +54,49 @@ void MainWindow::on_pushButton_2_clicked() {
 }
 
 
-
 void MainWindow::checkDirPermitions(QString &sPath) {
     QDir dir(sPath);
 //    if ()
 }
 
 
+void MainWindow::on_saveChages_clicked() {
+    MainTable *main_table = ui->tableWidget;
 
 
+    for (int i = 0; i < main_table->rowCount(); ++i) {
 
+    }
+}
 
+//void MainWindow::on_ApplyButton_clicked()
+//{
+//    DropTableWidget *table = ui->tableWidget;
+//    Tagger tagger;
 
-
-
-
-
-
-
-
-
-//    dir = new QDir(sPath);
-//    dir->setFilter(QDir::NoDotAndDotDot | QDir::Files);
-//    dir->setNameFilters(QStringList() << "*.mp3" << "*.flac" << "*.waw" << "*.ogg" << "*.aif");
-//
-//    QStringList list = dir->entryList();
-//    for (auto& i : list) {
-//        std::cout << i.toStdString() << std::endl;
+//    for (int i = 0; i < table->rowCount(); ++i) {
+//        int year = table->item(i, 4)->text().toInt();
+//        if (year < 0)
+//            year = 0;
+//        tagger.UpdateTagsInFile({
+//            table->item(i, 0)->text(),
+//            table->item(i, 1)->text(),
+//            table->item(i, 2)->text(),
+//            table->item(i, 3)->text(),
+//            static_cast<unsigned int>(year),
+//            table->item(i, 5)->text()
+//        });
 //    }
-
-//
-//    filemodel = new QFileSystemModel(this);
-//    filemodel->setRootPath(sPath);
-//    filemodel->setFilter(QDir::NoDotAndDotDot | QDir::Files);
-//    filemodel->setNameFilters(QStringList() << "*.mp3" << "*.flac" << "*.waw" << "*.ogg" << "*.aif");
-//    filemodel->setNameFilterDisables(false);
+//    ui->textEdit->WriteToLog("Changes was applied to files!");
+//    ui->statusbar->showMessage("Changes was applied to files!");
+//}
 
 
 
-//    ui->tableView->setRootIndex(filemodel->index(sPath));
-//    ui->tableView->setEditTriggers((QAbstractItemView::editTriggers()));
-//    ui->tableView->editTriggers();
-//    ui->tableWidget->UpdateTable();
+
+
+
+
+
 
 
