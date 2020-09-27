@@ -11,7 +11,8 @@ class MainTable : public QTableWidget {
     Q_OBJECT;
     public:
     explicit MainTable(QWidget *parent = nullptr);
-    void setTable(const QModelIndex &index, const QString& sPath);
+    QWidget* setCheck();
+    void setTable(const QString& sPath);
     void setApp(const QString& sPath);
     void commitData(QWidget *editor) override;
     void clearTable();

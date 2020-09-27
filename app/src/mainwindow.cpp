@@ -7,6 +7,12 @@ MainWindow::MainWindow(QString sPath, QWidget *parent) : QMainWindow(parent), ui
     ui->setupUi(this);
     this->setWindowTitle("utag");
 
+    picture = new QPixmap("/Users/mmasniy/Desktop/utag/app/res/Different-types-of-instore-music-1024x1024");
+    int h = ui->pictureLabel->height();
+    int w = ui->pictureLabel->width();
+
+    ui->pictureLabel->setPixmap(picture->scaled(w, h, Qt::KeepAspectRatio));
+
     dirmodel = new QFileSystemModel(this);
     dirmodel->setFilter(QDir::NoDotAndDotDot | QDir::AllDirs);
     dirmodel->setRootPath(sPath);
@@ -14,37 +20,32 @@ MainWindow::MainWindow(QString sPath, QWidget *parent) : QMainWindow(parent), ui
     ui->treeView->setModel(dirmodel);
     ui->treeView->setRootIndex(dirmodel->index(sPath));
     ui->textBrowser->insertPlainText(QTime::currentTime().toString() + " : start program Utag\n");
-//    ui->textBrowser_2->setPlainText("Choose directory!");
 
     for(int i = 1; i < dirmodel->columnCount(); ++i) {
         ui->treeView->hideColumn(i);
     }
-    ui->tableWidget->setTable(dirmodel->index(sPath), sPath);
+    ui->tableWidget->setTable(sPath);
+    ui->tableWidget->resizeColumnsToContents();
 }
 
 MainWindow::~MainWindow() {
     delete ui;
 }
 
-
 void MainWindow::on_treeView_clicked(const QModelIndex &index) {
     QString sPath = dirmodel->fileInfo(index).absoluteFilePath();
     ui->tableWidget->clearTable();
-    ui->textBrowser->insertPlainText(QTime::currentTime().toString() + " : table cleared\n");
-    ui->tableWidget->setTable(index, sPath);
+    ui->tableWidget->setTable(sPath);
+    ui->tableWidget->resizeColumnsToContents();
     ui->textBrowser->insertPlainText(QTime::currentTime().toString() + " : folder changed to " + sPath + "\n");
-//    ui->textBrowser_2->setPlainText(sPath);
-//    auto list = ui->tableWidget->selectedItems();
-//    for (auto& i : list) {
-//        std::cout << i << std::endl;
-//    }
 }
 
 void MainWindow::on_changeDir_clicked() {
     QString sPath = ui->plainTextEdit->toPlainText();
     if (!sPath.toStdString().empty()) {
         ui->tableWidget->clearTable();
-        ui->tableWidget->setTable(dirmodel->index(sPath), sPath);
+        ui->tableWidget->setTable(sPath);
+        ui->tableWidget->resizeColumnsToContents();
         ui->treeView->setModel(dirmodel);
         ui->treeView->setRootIndex(dirmodel->index(sPath));
         ui->textBrowser->insertPlainText(
@@ -53,50 +54,73 @@ void MainWindow::on_changeDir_clicked() {
     }
 }
 
-
 void MainWindow::checkDirPermitions(QString &sPath) {
     QDir dir(sPath);
-//    if ()
 }
 
+bool checkState(MainTable *main_table, int i) {
+    QTableWidgetItem* pItem(main_table->item(i, 0));
+//    qDebug() << main_table->item(i, 0);
+
+    Qt::CheckState st = Qt::Unchecked;
+    if (pItem) {
+         qDebug() <<"                                        1111111111111111111";
+         st = pItem->checkState();
+    }
+    return st == Qt::Checked;
+}
 
 void MainWindow::on_saveChages_clicked() {
     MainTable *main_table = ui->tableWidget;
-
-
+    size_t year = 0, track = 0;
+    qDebug() << "Сохранение данных!";
     for (int i = 0; i < main_table->rowCount(); ++i) {
+//        qDebug() << main_table->item(i, 0)->checkState();
+//        auto field = main_table->cellWidget(i, 0);
+
+//        std::cout << qobject_cast<QCheckBox*>(field)->isChecked() << std::endl;
+        if (checkState(main_table, i)) {
+            QFileInfo fileInfo(main_table->item(i, 8)->text());
+            if (fileInfo.exists() && fileInfo.isReadable() && fileInfo.isWritable()) {
+                TagLib::FileRef file(main_table->item(i, 8)->text().toStdString().c_str());
+                if (!file.isNull() && file.tag()) {
+                    file.tag()->setTitle(main_table->item(i, 2)->text().toStdString());
+                    file.tag()->setArtist(main_table->item(i, 3)->text().toStdString());
+                    file.tag()->setAlbum(main_table->item(i, 4)->text().toStdString());
+                    track = (main_table->item(i, 5)->text().toUInt());
+                    file.tag()->setTrack(track);
+                    file.tag()->setGenre(main_table->item(i, 6)->text().toStdString());
+                    year = (main_table->item(i, 7)->text().toUInt());
+                    file.tag()->setYear(year);
+                    file.save();
+                } else {
+                    ui->textBrowser->insertPlainText("File not valid " + main_table->item(i, 7)->text() + "\n");
+                }
+            } else {
+                ui->textBrowser->insertPlainText("Permissions denie :> " + main_table->item(i, 7)->text() + "\n");
+            }
+        }
 
     }
+    ui->textBrowser->insertPlainText("File/s have been changed!\n");
 }
 
-//void MainWindow::on_ApplyButton_clicked()
-//{
-//    DropTableWidget *table = ui->tableWidget;
-//    Tagger tagger;
+void MainWindow::on_pushButton_5_clicked() {
+    QString fileName = QFileDialog::getOpenFileName(this, tr("Open Image"), "/home",
+            tr("Image Files (*.png *.jpg *.bmp)"));
+}
 
-//    for (int i = 0; i < table->rowCount(); ++i) {
-//        int year = table->item(i, 4)->text().toInt();
-//        if (year < 0)
-//            year = 0;
-//        tagger.UpdateTagsInFile({
-//            table->item(i, 0)->text(),
-//            table->item(i, 1)->text(),
-//            table->item(i, 2)->text(),
-//            table->item(i, 3)->text(),
-//            static_cast<unsigned int>(year),
-//            table->item(i, 5)->text()
-//        });
-//    }
-//    ui->textEdit->WriteToLog("Changes was applied to files!");
-//    ui->statusbar->showMessage("Changes was applied to files!");
-//}
+void MainWindow::on_tableWidget_cellClicked(int row, int column) {
+    if (column == 0) {
+    QTableWidgetItem *checkBoxState = ui->tableWidget->item(row, column);
 
-
-
-
-
-
-
-
-
-
+        if(ui->tableWidget->item(row,column)->checkState()) {
+            checkBoxState->setCheckState(Qt::Unchecked);
+            ui->tableWidget->setItem(row, column, checkBoxState);
+        }
+        else {
+            checkBoxState->setCheckState(Qt::Checked);
+            ui->tableWidget->setItem(row, column, checkBoxState);
+        }
+    }
+}

@@ -11,7 +11,6 @@ FileTags::FileTags(const std::string &path, QString &fileName) {
         this->setInfo("title", tag->title().toCString());
         this->setInfo("artist", tag->artist().toCString());
         this->setInfo("album", tag->album().toCString());
-//        this->setInfo("comment", tag->comment().toCString());
         this->setInfo("genre", tag->genre().toCString());
         this->setInfo("year", QString::number(tag->year()));
         this->setInfo("track_number", QString::number(tag->track()));
@@ -42,9 +41,11 @@ void FileTags::upgradeFileTags(const FileTags &new_tags) {
     setInfo("artist", new_tags.getAllInfo()["artist"]);
     file.tag()->setAlbum(new_tags.getAllInfo()["album"].toStdString());
     setInfo("album", new_tags.getAllInfo()["album"]);
-    file.tag()->setComment(new_tags.getAllInfo()["comment"].toStdString());
-    setInfo("comment", new_tags.getAllInfo()["comment"]);
     file.tag()->setGenre(new_tags.getAllInfo()["genre"].toStdString());
     setInfo("genre", new_tags.getAllInfo()["genre"]);
+    file.tag()->setYear(new_tags.getAllInfo()["year"].toInt());
+    setInfo("year", new_tags.getAllInfo()["year"]);
+    file.tag()->setTrack(new_tags.getAllInfo()["track_number"].toInt());
+    setInfo("track_number", new_tags.getAllInfo()["track_number"]);
     file.save();
 }

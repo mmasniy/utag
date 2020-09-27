@@ -80,12 +80,17 @@
        </attribute>
        <column>
         <property name="text">
+         <string>Новый столбец</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
          <string>File Name</string>
         </property>
        </column>
        <column>
         <property name="text">
-         <string>Title</string>
+         <string>Update</string>
         </property>
        </column>
        <column>
@@ -310,16 +315,6 @@ font: 14pt &quot;Monaco&quot;;
      </item>
     </layout>
    </widget>
-   <widget class="QTextBrowser" name="textBrowser_4">
-    <property name="geometry">
-     <rect>
-      <x>930</x>
-      <y>160</y>
-      <width>211</width>
-      <height>201</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QWidget" name="verticalLayoutWidget_3">
     <property name="geometry">
      <rect>
@@ -357,6 +352,19 @@ font: 14pt &quot;Monaco&quot;;
       </widget>
      </item>
     </layout>
+   </widget>
+   <widget class="QLabel" name="pictureLabel">
+    <property name="geometry">
+     <rect>
+      <x>940</x>
+      <y>160</y>
+      <width>210</width>
+      <height>200</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

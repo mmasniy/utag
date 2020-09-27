@@ -9,6 +9,8 @@
 #include <QTreeView>
 #include <QString>
 #include <QStringList>
+#include <QPixmap>
+#include <QFileDialog>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -29,10 +31,14 @@ private slots:
 
     void on_saveChages_clicked();
 
+    void on_pushButton_5_clicked();
+
+    void on_tableWidget_cellClicked(int row, int column);
+
 private:
     Ui::MainWindow *ui;
     QFileSystemModel *dirmodel;
-    QFileSystemModel *filemodel;
     QDir *dir;
+    QPixmap *picture;
 };
 #endif // MAINWINDOW_H
