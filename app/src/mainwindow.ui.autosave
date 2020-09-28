@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1400</width>
+    <height>670</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1400</width>
+    <height>670</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1400</width>
+    <height>670</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonTextOnly</enum>
+  </property>
+  <property name="animated">
+   <bool>true</bool>
+  </property>
+  <property name="dockOptions">
+   <set>QMainWindow::AllowNestedDocks|QMainWindow::AnimatedDocks|QMainWindow::ForceTabbedDocks</set>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>901</width>
+      <height>611</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout" stretch="2,4">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout" stretch="3,2">
+       <item>
+        <widget class="QTreeView" name="treeView"/>
+       </item>
+       <item>
+        <widget class="QTextBrowser" name="textBrowser"/>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="MainTable" name="tableWidget">
+       <property name="verticalScrollBarPolicy">
+        <enum>Qt::ScrollBarAlwaysOn</enum>
+       </property>
+       <property name="editTriggers">
+        <set>QAbstractItemView::DoubleClicked</set>
+       </property>
+       <property name="alternatingRowColors">
+        <bool>true</bool>
+       </property>
+       <property name="selectionMode">
+        <enum>QAbstractItemView::MultiSelection</enum>
+       </property>
+       <property name="sortingEnabled">
+        <bool>true</bool>
+       </property>
+       <attribute name="horizontalHeaderDefaultSectionSize">
+        <number>150</number>
+       </attribute>
+       <column>
+        <property name="text">
+         <string>File Name</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Title</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Artist</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Album</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Track Number</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Genre</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Year</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>File Path</string>
+        </property>
+       </column>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>990</x>
+      <y>10</y>
+      <width>331</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+font: 24pt &quot;Monaco&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Information about file:</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>930</x>
+      <y>591</y>
+      <width>441</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="0">
+     <item>
+      <widget class="QPushButton" name="saveChages">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>Save Changes</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>930</x>
+      <y>50</y>
+      <width>446</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>446</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>446</width>
+      <height>100</height>
+     </size>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetDefaultConstraint</enum>
+     </property>
+     <item>
+      <widget class="QLabel" name="label_5">
+       <property name="minimumSize">
+        <size>
+         <width>400</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>400</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+font: 14pt &quot;Monaco&quot;;
+</string>
+       </property>
+       <property name="lineWidth">
+        <number>-1</number>
+       </property>
+       <property name="text">
+        <string>Write path to directory:</string>
+       </property>
+       <property name="indent">
+        <number>-1</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPlainTextEdit" name="plainTextEdit">
+       <property name="minimumSize">
+        <size>
+         <width>440</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>440</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="toolTipDuration">
+        <number>0</number>
+       </property>
+       <property name="lineWidth">
+        <number>-1</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="changeDir">
+       <property name="minimumSize">
+        <size>
+         <width>440</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>440</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Change Directory</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QTextBrowser" name="textBrowser_3">
+    <property name="geometry">
+     <rect>
+      <x>930</x>
+      <y>370</y>
+      <width>441</width>
+      <height>211</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>1170</x>
+      <y>280</y>
+      <width>201</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="pushButton_6">
+       <property name="maximumSize">
+        <size>
+         <width>207</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Edit Lyrics</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPlainTextEdit" name="plainTextEdit_3"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="maximumSize">
+        <size>
+         <width>207</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Save Lyrics</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>1170</x>
+      <y>160</y>
+      <width>201</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_4" stretch="0,0,0">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="pushButton_5">
+       <property name="maximumSize">
+        <size>
+         <width>207</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Select Image</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPlainTextEdit" name="plainTextEdit_2">
+       <property name="toolTipDuration">
+        <number>-1</number>
+       </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="maximumSize">
+        <size>
+         <width>207</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Save Image</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="pictureLabel">
+    <property name="geometry">
+     <rect>
+      <x>940</x>
+      <y>160</y>
+      <width>210</width>
+      <height>200</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1400</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionHelp"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionHelp">
+   <property name="text">
+    <string>Help</string>
+   </property>
+  </action>
+  <action name="actionfdgfdgfdgd">
+   <property name="text">
+    <string>fdgfdgfdgd</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MainTable</class>
+   <extends>QTableWidget</extends>
+   <header>MainTable.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

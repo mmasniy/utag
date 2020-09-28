@@ -53,16 +53,21 @@ void FileTags::upgradeFileTags(const FileTags &new_tags) {
     file.save();
 }
 
-void FileTags::setLyrics(const std::string& sPath) {
-    TagLib::MPEG::File file(fullPath(m_path, const_cast<char *>(m_name.c_str())).c_str());
-    TagLib::ID3v2::FrameList frames = file.ID3v2Tag()->frameListMap()["USLT"];
-    TagLib::ID3v2::UnsynchronizedLyricsFrame *frame = new TagLib::ID3v2::UnsynchronizedLyricsFrame;
+//void FileTags::setImag(std::string image, std::string sPath) {
+//    if (sPath.substr(sPath.find_last_of(".") + 1) == "mp3")
+//        ImageFile::getImageFile(image)->setArt(sPath));
+//}
 
-    file.ID3v2Tag()->removeFrames(file.ID3v2Tag()->frameListMap()["USLT"].front()->frameID());
-    frame->setText(lyrics);
-    file.ID3v2Tag()->addFrame(frame);
-    file.save();
-}
+//void FileTags::setLyrics(const std::string& sPath) {
+//    TagLib::MPEG::File file(fullPath(m_path, const_cast<char *>(m_name.c_str())).c_str());
+//    TagLib::ID3v2::FrameList frames = file.ID3v2Tag()->frameListMap()["USLT"];
+//    TagLib::ID3v2::UnsynchronizedLyricsFrame *frame = new TagLib::ID3v2::UnsynchronizedLyricsFrame;
+
+//    file.ID3v2Tag()->removeFrames(file.ID3v2Tag()->frameListMap()["USLT"].front()->frameID());
+//    frame->setText(lyrics);
+//    file.ID3v2Tag()->addFrame(frame);
+//    file.save();
+//}
 
 /*
  *void Element::lyricsSet(std::string lyrics) {
