@@ -5,7 +5,7 @@ My project to work with **audio-file tags** and **metadata**!
 You can use this app to view and edit audio-file tags,
 album images and lyrics.
 
-#The app can:
+# The app can:
 
 - [x] _opens the directory with the audio files through the GUI as well as through thecommand-line argument_
 - [x] _support supports the following audio formats:_<br/>
@@ -31,17 +31,17 @@ album images and lyrics.
 - [ ] _edits an album image for an audio file and displays it via the GUI_
 - [x] _fully supports Unicode. Correctly displays any character from any language_
 
-#uTag
+# uTag
 
 ![Images](https://user-images.githubusercontent.com/44983824/94473374-c84b3a80-01d4-11eb-8252-ca742fd86638.png)
 
-#Instalation
+# Instalation
 
 1. `git clone --recursive https://github.com/mmasniy/utag.git`
 2. `cmake . -Bbuild -Wdev -Werror=dev && cmake --build ./build`
 3. `./build/app/utag` or `/build/app/utag [path to directory]`
 
-#Tools who I used:
+# Tools who I used:
 
  - **Cmake** - is an open-source, cross-platform family of tools designed to build, test and package software.
  - **Qt** - is the faster, smarter way to create innovative devices, modern UIs & applications for multiple screens.
