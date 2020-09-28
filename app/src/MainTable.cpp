@@ -25,7 +25,6 @@ void MainTable::setTable(const QString& sPath) {
         fileName->setFlags(fileName->flags() ^ Qt::ItemIsEditable ^ Qt::ItemIsSelectable);
         insertRow(rowCount());
 
-//        setCellWidget(rowCount() - 1, 0, setCheck());
         setItem(rowCount() - 1, 0, fileName);
         setItem(rowCount() - 1, 1, new QTableWidgetItem(i.getAllInfo()["title"]));
         setItem(rowCount() - 1, 2, new QTableWidgetItem(i.getAllInfo()["artist"]));

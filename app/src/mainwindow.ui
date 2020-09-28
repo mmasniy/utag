@@ -127,7 +127,7 @@
      <rect>
       <x>990</x>
       <y>10</y>
-      <width>331</width>
+      <width>501</width>
       <height>31</height>
      </rect>
     </property>
@@ -402,11 +402,6 @@ font: 14pt &quot;Monaco&quot;;
   <action name="actionHelp">
    <property name="text">
     <string>Help</string>
-   </property>
-  </action>
-  <action name="actionfdgfdgfdgd">
-   <property name="text">
-    <string>fdgfdgfdgd</string>
    </property>
   </action>
  </widget>

@@ -5,7 +5,7 @@ My project to work with **audio-file tags** and **metadata**!
 You can use this app to view and edit audio-file tags,
 album images and lyrics.
 
-# The app can:
+# The app can
 
 - [x] _opens the directory with the audio files through the GUI as well as through thecommand-line argument_
 - [x] _support supports the following audio formats:_<br/>
@@ -41,7 +41,7 @@ album images and lyrics.
 2. `cmake . -Bbuild -Wdev -Werror=dev && cmake --build ./build`
 3. `./build/app/utag` or `/build/app/utag [path to directory]`
 
-# Tools who I used:
+# Tools who I used
 
  - **Cmake** - is an open-source, cross-platform family of tools designed to build, test and package software.
  - **Qt** - is the faster, smarter way to create innovative devices, modern UIs & applications for multiple screens.

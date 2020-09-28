@@ -5,7 +5,7 @@
 
 MainWindow::MainWindow(QString sPath, QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
-    this->setWindowTitle("utag");
+    this->setWindowTitle("uTag");
 
     picture = new QPixmap("/Users/mmasniy/Desktop/utag/app/res/Different-types-of-instore-music-1024x1024");
     int h = ui->pictureLabel->height();
@@ -18,7 +18,8 @@ MainWindow::MainWindow(QString sPath, QWidget *parent) : QMainWindow(parent), ui
     dirmodel->setRootPath(sPath);
 
     ui->treeView->setModel(dirmodel);
-    ui->treeView->setRootIndex(dirmodel->index(sPath));
+    if (checkDirPermitions(sPath))
+        ui->treeView->setRootIndex(dirmodel->index(sPath));
     ui->textBrowser->insertPlainText(QTime::currentTime().toString() + " : start program Utag\n");
 
     for(int i = 1; i < dirmodel->columnCount(); ++i) {
@@ -91,10 +92,8 @@ void MainWindow::on_saveChages_clicked() {
             TagLib::FileRef file(main_table->item(i, 7)->text().toStdString().c_str());
             if (!file.isNull() && file.tag()) {
                 saveTagsInFile(main_table, file, i);
-//                QMessageBox::warning(this, "Warning", "Нет доступа к файлу: " + main_table->item(i, 0)->text());
             } else {
                 ui->textBrowser->insertPlainText("File not valid " + main_table->item(i, 7)->text() + "\n");
-//                QMessageBox::warning(this, "Warning", "Нет доступа к файлу: " + main_table->item(i, 0)->text());
                 QMessageBox::warning(this, "Warning", "Нет доступа к файлу: " + main_table->item(i, 0)->text());
             }
         } else {
@@ -111,16 +110,10 @@ void MainWindow::on_pushButton_5_clicked() {
 }
 
 void MainWindow::on_tableWidget_cellClicked(int row, int column) {
-    if (column == 0) {
-    QTableWidgetItem *checkBoxState = ui->tableWidget->item(row, column);
+    //сдесь сделать подгрузку фото альбома!!!
+}
 
-        if(ui->tableWidget->item(row,column)->checkState()) {
-            checkBoxState->setCheckState(Qt::Unchecked);
-            ui->tableWidget->setItem(row, column, checkBoxState);
-        }
-        else {
-            checkBoxState->setCheckState(Qt::Checked);
-            ui->tableWidget->setItem(row, column, checkBoxState);
-        }
-    }
+void MainWindow::on_actionHelp_triggered() {
+    QMessageBox::about(this, "uTag", "This project to work with audio-file tags and metadata!\n"
+                       "You can use this app to view and edit audio-file tags, album images and lyrics.");
 }
