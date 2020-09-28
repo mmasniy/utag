@@ -11,6 +11,7 @@
 #include <QStringList>
 #include <QPixmap>
 #include <QFileDialog>
+#include <QMessageBox>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -21,7 +22,7 @@ class MainWindow : public QMainWindow{
 
 public:
     explicit MainWindow(QString path = "/", QWidget *parent = nullptr);
-    void checkDirPermitions(QString& sPath);
+    bool checkDirPermitions(QString& sPath);
     ~MainWindow() override;
 
 private slots:

@@ -1,4 +1,4 @@
-#include "mainwindow.h"
+﻿#include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "Application.h"
 #include "MainTable.h"
@@ -42,65 +42,65 @@ void MainWindow::on_treeView_clicked(const QModelIndex &index) {
 
 void MainWindow::on_changeDir_clicked() {
     QString sPath = ui->plainTextEdit->toPlainText();
-    if (!sPath.toStdString().empty()) {
-        ui->tableWidget->clearTable();
-        ui->tableWidget->setTable(sPath);
-        ui->tableWidget->resizeColumnsToContents();
-        ui->treeView->setModel(dirmodel);
-        ui->treeView->setRootIndex(dirmodel->index(sPath));
-        ui->textBrowser->insertPlainText(
-            QTime::currentTime().toString() + " : folder changed to " + sPath
-                + "\n");
+    if(checkDirPermitions(sPath)) {
+        if (!sPath.toStdString().empty()) {
+            ui->tableWidget->clearTable();
+            ui->tableWidget->setTable(sPath);
+            ui->tableWidget->resizeColumnsToContents();
+            ui->treeView->setModel(dirmodel);
+            ui->treeView->setRootIndex(dirmodel->index(sPath));
+            ui->textBrowser->insertPlainText(
+                QTime::currentTime().toString() + " : folder changed to " + sPath
+                    + "\n");
+        }
     }
 }
 
-void MainWindow::checkDirPermitions(QString &sPath) {
+bool MainWindow::checkDirPermitions(QString &sPath) {
     QDir dir(sPath);
+    if (!dir.exists()) {
+        QMessageBox::warning(this, "Folder", "Folder doesn`t exist!\nInput valid folder name!");
+        return false;
+    }
+    if (!dir.isReadable()) {
+        QMessageBox::warning(this, "Folder", "Folder isn`t readble\nInput valid folder name!");
+        return false;
+    }
+    return true;
 }
 
-bool checkState(MainTable *main_table, int i) {
-    QTableWidgetItem* pItem(main_table->item(i, 0));
-//    qDebug() << main_table->item(i, 0);
-
-    Qt::CheckState st = Qt::Unchecked;
-    if (pItem) {
-         qDebug() <<"                                        1111111111111111111";
-         st = pItem->checkState();
-    }
-    return st == Qt::Checked;
+void saveTagsInFile(MainTable *main_table, TagLib::FileRef& file, int i) {
+    size_t year = 0, track = 0;
+    file.tag()->setTitle(main_table->item(i, 1)->text().toStdString());
+    file.tag()->setArtist(main_table->item(i, 2)->text().toStdString());
+    file.tag()->setAlbum(main_table->item(i, 3)->text().toStdString());
+    track = (main_table->item(i, 4)->text().toUInt());
+    file.tag()->setTrack(track);
+    file.tag()->setGenre(main_table->item(i, 5)->text().toStdString());
+    year = (main_table->item(i, 6)->text().toUInt());
+    file.tag()->setYear(year);
+    file.save();
 }
 
 void MainWindow::on_saveChages_clicked() {
     MainTable *main_table = ui->tableWidget;
-    size_t year = 0, track = 0;
     qDebug() << "Сохранение данных!";
     for (int i = 0; i < main_table->rowCount(); ++i) {
-//        qDebug() << main_table->item(i, 0)->checkState();
-//        auto field = main_table->cellWidget(i, 0);
-
-//        std::cout << qobject_cast<QCheckBox*>(field)->isChecked() << std::endl;
-        if (checkState(main_table, i)) {
-            QFileInfo fileInfo(main_table->item(i, 8)->text());
-            if (fileInfo.exists() && fileInfo.isReadable() && fileInfo.isWritable()) {
-                TagLib::FileRef file(main_table->item(i, 8)->text().toStdString().c_str());
-                if (!file.isNull() && file.tag()) {
-                    file.tag()->setTitle(main_table->item(i, 2)->text().toStdString());
-                    file.tag()->setArtist(main_table->item(i, 3)->text().toStdString());
-                    file.tag()->setAlbum(main_table->item(i, 4)->text().toStdString());
-                    track = (main_table->item(i, 5)->text().toUInt());
-                    file.tag()->setTrack(track);
-                    file.tag()->setGenre(main_table->item(i, 6)->text().toStdString());
-                    year = (main_table->item(i, 7)->text().toUInt());
-                    file.tag()->setYear(year);
-                    file.save();
-                } else {
-                    ui->textBrowser->insertPlainText("File not valid " + main_table->item(i, 7)->text() + "\n");
-                }
+        QFileInfo fileInfo(main_table->item(i, 7)->text());
+        if (fileInfo.exists() && fileInfo.isReadable() && fileInfo.isWritable()) {
+            TagLib::FileRef file(main_table->item(i, 7)->text().toStdString().c_str());
+            if (!file.isNull() && file.tag()) {
+                saveTagsInFile(main_table, file, i);
+//                QMessageBox::warning(this, "Warning", "Нет доступа к файлу: " + main_table->item(i, 0)->text());
             } else {
-                ui->textBrowser->insertPlainText("Permissions denie :> " + main_table->item(i, 7)->text() + "\n");
+                ui->textBrowser->insertPlainText("File not valid " + main_table->item(i, 7)->text() + "\n");
+//                QMessageBox::warning(this, "Warning", "Нет доступа к файлу: " + main_table->item(i, 0)->text());
+                QMessageBox::warning(this, "Warning", "Нет доступа к файлу: " + main_table->item(i, 0)->text());
             }
+        } else {
+            ui->textBrowser->insertPlainText("Permissions denie :> " + main_table->item(i, 7)->text() + "\n");
+            QMessageBox::warning(this, "Warning", "Нет доступа к файлу: " + main_table->item(i, 0)->text());
         }
-
     }
     ui->textBrowser->insertPlainText("File/s have been changed!\n");
 }

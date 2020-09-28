@@ -16,6 +16,7 @@ class MainTable : public QTableWidget {
     void setApp(const QString& sPath);
     void commitData(QWidget *editor) override;
     void clearTable();
+    bool checkPermForFile(QString sPath);
     ~MainTable() override;
     protected:
 

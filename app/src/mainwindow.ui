@@ -80,11 +80,6 @@
        </attribute>
        <column>
         <property name="text">
-         <string>Новый столбец</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
          <string>File Name</string>
         </property>
        </column>
@@ -188,6 +183,9 @@ font: 24pt &quot;Monaco&quot;;</string>
      </size>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_2">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetDefaultConstraint</enum>
+     </property>
      <item>
       <widget class="QLabel" name="label_5">
        <property name="minimumSize">
@@ -222,13 +220,13 @@ font: 14pt &quot;Monaco&quot;;
       <widget class="QPlainTextEdit" name="plainTextEdit">
        <property name="minimumSize">
         <size>
-         <width>435</width>
+         <width>440</width>
          <height>0</height>
         </size>
        </property>
        <property name="maximumSize">
         <size>
-         <width>435</width>
+         <width>440</width>
          <height>100</height>
         </size>
        </property>
@@ -244,13 +242,13 @@ font: 14pt &quot;Monaco&quot;;
       <widget class="QPushButton" name="changeDir">
        <property name="minimumSize">
         <size>
-         <width>446</width>
+         <width>440</width>
          <height>0</height>
         </size>
        </property>
        <property name="maximumSize">
         <size>
-         <width>446</width>
+         <width>440</width>
          <height>100</height>
         </size>
        </property>
@@ -276,7 +274,7 @@ font: 14pt &quot;Monaco&quot;;
      <rect>
       <x>1170</x>
       <y>280</y>
-      <width>211</width>
+      <width>201</width>
       <height>81</height>
      </rect>
     </property>
@@ -301,6 +299,9 @@ font: 14pt &quot;Monaco&quot;;
       </widget>
      </item>
      <item>
+      <widget class="QPlainTextEdit" name="plainTextEdit_3"/>
+     </item>
+     <item>
       <widget class="QPushButton" name="pushButton_4">
        <property name="maximumSize">
         <size>
@@ -320,11 +321,14 @@ font: 14pt &quot;Monaco&quot;;
      <rect>
       <x>1170</x>
       <y>160</y>
-      <width>211</width>
-      <height>80</height>
+      <width>201</width>
+      <height>81</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout_4">
+    <layout class="QVBoxLayout" name="verticalLayout_4" stretch="0,0,0">
+     <property name="spacing">
+      <number>0</number>
+     </property>
      <item>
       <widget class="QPushButton" name="pushButton_5">
        <property name="maximumSize">
@@ -335,6 +339,16 @@ font: 14pt &quot;Monaco&quot;;
        </property>
        <property name="text">
         <string>Select Image</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPlainTextEdit" name="plainTextEdit_2">
+       <property name="toolTipDuration">
+        <number>-1</number>
+       </property>
+       <property name="lineWidth">
+        <number>1</number>
        </property>
       </widget>
      </item>
