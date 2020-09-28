@@ -85,7 +85,7 @@
        </column>
        <column>
         <property name="text">
-         <string>Update</string>
+         <string>Title</string>
         </property>
        </column>
        <column>
