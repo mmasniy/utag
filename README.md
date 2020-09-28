@@ -32,5 +32,17 @@ album images and lyrics.
 - [x] _fully supports Unicode. Correctly displays any character from any language_
 
 #uTag
-[!Images](https://user-images.githubusercontent.com/44983824/94473374-c84b3a80-01d4-11eb-8252-ca742fd86638.png)
 
+![Images](https://user-images.githubusercontent.com/44983824/94473374-c84b3a80-01d4-11eb-8252-ca742fd86638.png)
+
+#Instalation
+
+1. `git clone --recursive https://github.com/mmasniy/utag.git`
+2. `cmake . -Bbuild -Wdev -Werror=dev && cmake --build ./build`
+3. `./build/app/utag` or `/build/app/utag [path to directory]`
+
+#Tools who I used:
+
+ - **Cmake** - is an open-source, cross-platform family of tools designed to build, test and package software.
+ - **Qt** - is the faster, smarter way to create innovative devices, modern UIs & applications for multiple screens.
+ - **TagLib** - is a library for reading and editing the meta-data of several popular audio formats. 
