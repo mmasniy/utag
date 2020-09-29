@@ -13,6 +13,8 @@
 #include <QFileDialog>
 #include <QMessageBox>
 
+#include "ImageFile.h"
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -23,6 +25,8 @@ class MainWindow : public QMainWindow{
 public:
     explicit MainWindow(QString path = "/", QWidget *parent = nullptr);
     bool checkDirPermitions(QString& sPath);
+    void getImage(std::string path);
+    void setImage(const char *file_path, const char *image_path);
     ~MainWindow() override;
 
 private slots:
@@ -38,10 +42,14 @@ private slots:
 
     void on_actionHelp_triggered();
 
+    void on_pushButton_3_clicked();
+
 private:
     Ui::MainWindow *ui;
     QFileSystemModel *dirmodel;
     QDir *dir;
     QPixmap *picture;
+    QString imgPath;
+    std::string songPath;
 };
 #endif // MAINWINDOW_H

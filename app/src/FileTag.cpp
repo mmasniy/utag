@@ -53,10 +53,6 @@ void FileTags::upgradeFileTags(const FileTags &new_tags) {
     file.save();
 }
 
-//void FileTags::setImag(std::string image, std::string sPath) {
-//    if (sPath.substr(sPath.find_last_of(".") + 1) == "mp3")
-//        ImageFile::getImageFile(image)->setArt(sPath));
-//}
 
 //void FileTags::setLyrics(const std::string& sPath) {
 //    TagLib::MPEG::File file(fullPath(m_path, const_cast<char *>(m_name.c_str())).c_str());

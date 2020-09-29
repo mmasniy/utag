@@ -9,9 +9,10 @@
 #include <../taglib/fileref.h>
 #include <toolkit/tpropertymap.h>
 #include <mpegfile.h>
-//#include <attachedpictureframe.h>
 #include <id3v2tag.h>
 #include <QString>
+
+#include "ImageFile.h"
 
 class FileTags {
     public:
@@ -21,10 +22,10 @@ class FileTags {
     [[nodiscard]] std::map<std::string, QString> getAllInfo() const;
     void upgradeFileTags(const FileTags& new_tags);
     friend std::ostream& operator<<(std::ostream& out, const FileTags& file);
-    void setImag(std::string image, std::string sPath);
-    void getImag();
-    void setLyrics();
-    QString getLyrics();
+    static void setImag(const std::string& image, const std::string& sPath);
+//    void getImag();
+//    void setLyrics();
+//    QString getLyrics();
     private:
     TagLib::FileRef fileRef;
     std::map<std::string, QString> m_file_tags;

@@ -299,9 +299,6 @@ font: 14pt &quot;Monaco&quot;;
       </widget>
      </item>
      <item>
-      <widget class="QPlainTextEdit" name="plainTextEdit_3"/>
-     </item>
-     <item>
       <widget class="QPushButton" name="pushButton_4">
        <property name="maximumSize">
         <size>
@@ -325,7 +322,7 @@ font: 14pt &quot;Monaco&quot;;
       <height>81</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout_4" stretch="0,0,0">
+    <layout class="QVBoxLayout" name="verticalLayout_4" stretch="0,0">
      <property name="spacing">
       <number>0</number>
      </property>
@@ -339,16 +336,6 @@ font: 14pt &quot;Monaco&quot;;
        </property>
        <property name="text">
         <string>Select Image</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPlainTextEdit" name="plainTextEdit_2">
-       <property name="toolTipDuration">
-        <number>-1</number>
-       </property>
-       <property name="lineWidth">
-        <number>1</number>
        </property>
       </widget>
      </item>
