@@ -7,19 +7,13 @@ MainWindow::MainWindow(QString sPath, QWidget *parent) : QMainWindow(parent), ui
     ui->setupUi(this);
     this->setWindowTitle("uTag");
 
-    picture = new QPixmap("/Users/mmasniy/Desktop/utag/app/res/fon");
-    int h = ui->pictureLabel->height();
-    int w = ui->pictureLabel->width();
-
-    ui->pictureLabel->setPixmap(picture->scaled(w, h, Qt::KeepAspectRatio));
+    setDefaultImage("/Users/mmasniy/Desktop/utag/app/res/fon");
 
     dirmodel = new QFileSystemModel(this);
     dirmodel->setFilter(QDir::NoDotAndDotDot | QDir::AllDirs);
     dirmodel->setRootPath(sPath);
 
     ui->treeView->setModel(dirmodel);
-    if (checkDirPermitions(sPath))
-        ui->treeView->setRootIndex(dirmodel->index(sPath));
     ui->textBrowser->insertPlainText(QTime::currentTime().toString() + " : start program Utag\n");
 
     for(int i = 1; i < dirmodel->columnCount(); ++i) {
@@ -27,6 +21,8 @@ MainWindow::MainWindow(QString sPath, QWidget *parent) : QMainWindow(parent), ui
     }
     ui->tableWidget->setTable(sPath);
     ui->tableWidget->resizeColumnsToContents();
+    if (checkDirPermitions(sPath))
+        ui->treeView->setRootIndex(dirmodel->index(sPath));
 }
 
 MainWindow::~MainWindow() {
@@ -34,15 +30,18 @@ MainWindow::~MainWindow() {
 }
 
 void MainWindow::on_treeView_clicked(const QModelIndex &index) {
-    //сделать проверку на папку!
+    setDefaultImage("/Users/mmasniy/Desktop/utag/app/res/fon");
     QString sPath = dirmodel->fileInfo(index).absoluteFilePath();
-    ui->tableWidget->clearTable();
-    ui->tableWidget->setTable(sPath);
-    ui->tableWidget->resizeColumnsToContents();
-    ui->textBrowser->insertPlainText(QTime::currentTime().toString() + " : folder changed to " + sPath + "\n");
+    if (checkDirPermitions(sPath)) {
+        ui->tableWidget->clearTable();
+        ui->tableWidget->setTable(sPath);
+        ui->tableWidget->resizeColumnsToContents();
+        ui->textBrowser->insertPlainText(QTime::currentTime().toString() + " : folder changed to " + sPath + "\n");
+    }
 }
 
 void MainWindow::on_changeDir_clicked() {
+    setDefaultImage("/Users/mmasniy/Desktop/utag/app/res/fon");
     QString sPath = ui->plainTextEdit->toPlainText();
     if(checkDirPermitions(sPath)) {
         if (!sPath.toStdString().empty()) {
@@ -91,6 +90,8 @@ void MainWindow::saveTagsInFile(MainTable *main_table, TagLib::FileRef& file, in
         QMessageBox::about(this, "Year", "Year can`t be more current year or text");
     }
     file.save();
+//    ui->textBrowser->insertPlainText(QTime::currentTime().toString() + " : Tags for file " +
+//                                     main_table->item(i, 0)->text() + "saved\n");
 }
 
 void MainWindow::on_saveChages_clicked() {
@@ -116,6 +117,7 @@ void MainWindow::on_saveChages_clicked() {
 void MainWindow::on_pushButton_5_clicked() {
     imgPath = QFileDialog::getOpenFileName(this, tr("Open Image"), "/home",
             tr("Image Files (*.png *.jpg *.bmp)"));
+    ui->textBrowser->insertPlainText(QTime::currentTime().toString() + " : Image select! You can set her!\n");
 }
 
 void MainWindow::getImage(std::string path) {
@@ -145,10 +147,11 @@ void MainWindow::on_tableWidget_cellClicked(int row, int column) {
     if (path.substr(path.find_last_of(".") + 1) == "mp3") {
         songPath = path;
     }
-
     if(!path.empty()) {
         getImage(path);
         ui->lyrics->setPlainText(QString::fromStdString(getLyrics(path)));
+        ui->textBrowser->insertPlainText(QTime::currentTime().toString() + " : Image and lyrics for file "
+                                         + main_table->item(row, 0)->text() + " loaded\n");
     }
 }
 
@@ -179,6 +182,7 @@ void MainWindow::setImage(const char *file_path, const char *image_path) {
 void MainWindow::on_pushButton_3_clicked() {
     if(!songPath.empty() && imgPath != nullptr) {
         setImage(songPath.c_str(), imgPath.toStdString().c_str());
+        ui->textBrowser->insertPlainText(QTime::currentTime().toString() + " : Image set!\n");
         getImage(songPath);
     } else {
          QMessageBox::warning(this, "Warning", "Before downloading, you need to select a file in the main window and"
@@ -203,6 +207,14 @@ void MainWindow::setLyrics(std::string songText) {
     }
 }
 
+void MainWindow::setDefaultImage(const QString &imgPath) {
+    picture = new QPixmap(imgPath);
+    int h = ui->pictureLabel->height();
+    int w = ui->pictureLabel->width();
+
+    ui->pictureLabel->setPixmap(picture->scaled(w, h, Qt::KeepAspectRatio));
+}
+
 std::string MainWindow::getLyrics(std::string path) {
     TagLib::String lyrics;
     TagLib::MPEG::File file(path.c_str());
@@ -219,7 +231,20 @@ std::string MainWindow::getLyrics(std::string path) {
 
 void MainWindow::on_saveLyrics_clicked() {
     if (!songPath.empty()) {
-        setLyrics(ui->lyrics->toPlainText().toStdString());
+        std::string text = ui->lyrics->toPlainText().toStdString();
+        if (!text.empty()) {
+            setLyrics(text);
+            ui->textBrowser->insertPlainText(QTime::currentTime().toString() + " : Lyrics set!\n");
+        } else {
+            QMessageBox::StandardButton but = QMessageBox::question(this, "Save", "Do you want to save empty lyrics?",
+                                                                QMessageBox::Yes | QMessageBox::No);
+            if (but == QMessageBox::Yes) {
+                setLyrics(text);
+                ui->textBrowser->insertPlainText(QTime::currentTime().toString() + " : Lyrics set!\n");
+            } else {
+                QMessageBox::about(this, "Information", "Empty lyrics wasn`t saved to file!");
+            }
+        }
         ui->lyrics->setPlainText("");
     } else {
         QMessageBox::warning(this, "Warning", "Select a one of files in the main window!");

@@ -30,6 +30,7 @@ public:
     void setImage(const char *file_path, const char *image_path);
     void saveTagsInFile(MainTable *main_table, TagLib::FileRef& file, int i);
     void setLyrics(std::string songText);
+    void setDefaultImage(const QString& imgPath);
     std::string getLyrics(std::string path);
     ~MainWindow() override;
 
