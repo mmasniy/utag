@@ -25,10 +25,10 @@ album images and lyrics.
     * **year**
     * **absolute path to file**
 - [x] _support audio files items sorting in alphabetical (ascending and descending) order bya certain tag_
-- [ ] _supports the display and edit of the lyrics_
+- [x] _supports the display and edit of the lyrics_
 - [x] _supports the tracking of history_
     * **displays activity log**
-- [ ] _edits an album image for an audio file and displays it via the GUI_
+- [x] _edits an album image for an audio file and displays it via the GUI_
 - [x] _fully supports Unicode. Correctly displays any character from any language_
 
 # uTag

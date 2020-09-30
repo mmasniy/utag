@@ -14,6 +14,7 @@
 #include <QMessageBox>
 
 #include "ImageFile.h"
+#include "MainTable.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -27,6 +28,9 @@ public:
     bool checkDirPermitions(QString& sPath);
     void getImage(std::string path);
     void setImage(const char *file_path, const char *image_path);
+    void saveTagsInFile(MainTable *main_table, TagLib::FileRef& file, int i);
+    void setLyrics(std::string songText);
+    std::string getLyrics(std::string path);
     ~MainWindow() override;
 
 private slots:
@@ -43,6 +47,8 @@ private slots:
     void on_actionHelp_triggered();
 
     void on_pushButton_3_clicked();
+
+    void on_saveLyrics_clicked();
 
 private:
     Ui::MainWindow *ui;

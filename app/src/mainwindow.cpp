@@ -34,6 +34,7 @@ MainWindow::~MainWindow() {
 }
 
 void MainWindow::on_treeView_clicked(const QModelIndex &index) {
+    //сделать проверку на папку!
     QString sPath = dirmodel->fileInfo(index).absoluteFilePath();
     ui->tableWidget->clearTable();
     ui->tableWidget->setTable(sPath);
@@ -70,22 +71,30 @@ bool MainWindow::checkDirPermitions(QString &sPath) {
     return true;
 }
 
-void saveTagsInFile(MainTable *main_table, TagLib::FileRef& file, int i) {
+void MainWindow::saveTagsInFile(MainTable *main_table, TagLib::FileRef& file, int i) {
     size_t year = 0, track = 0;
     file.tag()->setTitle(main_table->item(i, 1)->text().toStdString());
     file.tag()->setArtist(main_table->item(i, 2)->text().toStdString());
     file.tag()->setAlbum(main_table->item(i, 3)->text().toStdString());
     track = (main_table->item(i, 4)->text().toUInt());
-    file.tag()->setTrack(track);
+    if (track <= 100 && track > 0) {
+        file.tag()->setTrack(track);
+    } else {
+         QMessageBox::about(this, "Track Number", "Track Number can`t be more 100 and less 1 or text");
+    }
     file.tag()->setGenre(main_table->item(i, 5)->text().toStdString());
     year = (main_table->item(i, 6)->text().toUInt());
-    file.tag()->setYear(year);
+    QDate date = QDate::currentDate();
+    if (static_cast<size_t>(date.year()) >= year) {
+        file.tag()->setYear(year);
+     } else {
+        QMessageBox::about(this, "Year", "Year can`t be more current year or text");
+    }
     file.save();
 }
 
 void MainWindow::on_saveChages_clicked() {
     MainTable *main_table = ui->tableWidget;
-    qDebug() << "Сохранение данных!";
     for (int i = 0; i < main_table->rowCount(); ++i) {
         QFileInfo fileInfo(main_table->item(i, 7)->text());
         if (fileInfo.exists() && fileInfo.isReadable() && fileInfo.isWritable()) {
@@ -134,11 +143,12 @@ void MainWindow::on_tableWidget_cellClicked(int row, int column) {
         column = 7;
     std::string path = main_table->item(row, column)->text().toStdString();
     if (path.substr(path.find_last_of(".") + 1) == "mp3") {
-        qDebug() << "Сохранение пути к файлу";
         songPath = path;
     }
+
     if(!path.empty()) {
         getImage(path);
+        ui->lyrics->setPlainText(QString::fromStdString(getLyrics(path)));
     }
 }
 
@@ -147,7 +157,7 @@ void MainWindow::on_actionHelp_triggered() {
                        "You can use this app to view and edit audio-file tags, album images and lyrics.");
 }
 
-void setImage(const char *file_path, const char *image_path) {
+void MainWindow::setImage(const char *file_path, const char *image_path) {
     TagLib::MPEG::File mpegFile(file_path);
     TagLib::ID3v2::Tag *tag = mpegFile.ID3v2Tag();
     TagLib::ID3v2::FrameList frames = tag->frameList("APIC");
@@ -168,10 +178,50 @@ void setImage(const char *file_path, const char *image_path) {
 
 void MainWindow::on_pushButton_3_clicked() {
     if(!songPath.empty() && imgPath != nullptr) {
-        qDebug() << "Сохранение картинки";
         setImage(songPath.c_str(), imgPath.toStdString().c_str());
+        getImage(songPath);
     } else {
          QMessageBox::warning(this, "Warning", "Before downloading, you need to select a file in the main window and"
                               "a picture through the button \"Select Image\"! File must also have the extension .mp3");
+    }
+}
+
+void MainWindow::setLyrics(std::string songText) {
+    if (!songPath.empty()) {
+        TagLib::MPEG::File file(songPath.c_str());
+        TagLib::ID3v2::FrameList frames = file.ID3v2Tag()->frameListMap()["USLT"];
+        auto *frame = new TagLib::ID3v2::UnsynchronizedLyricsFrame;
+
+        if (!file.ID3v2Tag()->frameListMap()["USLT"].isEmpty()) {
+            file.ID3v2Tag()->removeFrames(file.ID3v2Tag()->frameListMap()["USLT"].front()->frameID());
+        }
+        frame->setText(songText);
+        file.ID3v2Tag()->addFrame(frame);
+        file.save();
+    } else {
+        QMessageBox::warning(this, "Warning", "Select a one of files in the main window!");
+    }
+}
+
+std::string MainWindow::getLyrics(std::string path) {
+    TagLib::String lyrics;
+    TagLib::MPEG::File file(path.c_str());
+    TagLib::ID3v2::FrameList frames = file.ID3v2Tag()->frameListMap()["USLT"];
+    TagLib::ID3v2::UnsynchronizedLyricsFrame *frame = NULL;
+
+    if (!frames.isEmpty()) {
+        frame = dynamic_cast<TagLib::ID3v2::UnsynchronizedLyricsFrame *>(frames.front());
+        if (frame)
+            lyrics = frame->text();
+    }
+    return std::string(lyrics.toCString());
+}
+
+void MainWindow::on_saveLyrics_clicked() {
+    if (!songPath.empty()) {
+        setLyrics(ui->lyrics->toPlainText().toStdString());
+        ui->lyrics->setPlainText("");
+    } else {
+        QMessageBox::warning(this, "Warning", "Select a one of files in the main window!");
     }
 }
