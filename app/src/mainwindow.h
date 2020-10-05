@@ -52,11 +52,11 @@ private slots:
     void on_saveLyrics_clicked();
 
 private:
-    Ui::MainWindow *ui;
-    QFileSystemModel *dirmodel;
-    QDir *dir;
-    QPixmap *picture;
-    QString imgPath;
-    std::string songPath;
+    Ui::MainWindow *m_ui;
+    QFileSystemModel *m_dirmodel;
+    QDir *m_dir;
+    QPixmap *m_picture;
+    QString m_imgPath;
+    std::string m_songPath;
 };
 #endif // MAINWINDOW_H

@@ -5,7 +5,7 @@ FileTags::FileTags(const std::string &path, QString &fileName) {
     this->setInfo("filename", fileName);
     this->setInfo("path", QString::fromStdString(fullPath));
     TagLib::FileRef f(fullPath.c_str());
-    fileRef = f;
+    m_fileRef = f;
     if (!f.isNull() && f.tag()) {
         TagLib::Tag *tag = f.tag();
         this->setInfo("title", tag->title().toCString());

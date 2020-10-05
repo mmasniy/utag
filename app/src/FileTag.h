@@ -22,11 +22,8 @@ class FileTags {
     [[nodiscard]] std::map<std::string, QString> getAllInfo() const;
     void upgradeFileTags(const FileTags& new_tags);
     friend std::ostream& operator<<(std::ostream& out, const FileTags& file);
-    static void setImag(const std::string& image, const std::string& sPath);
-//    void getImag();
-//    void setLyrics();
-//    QString getLyrics();
+
     private:
-    TagLib::FileRef fileRef;
+    TagLib::FileRef m_fileRef;
     std::map<std::string, QString> m_file_tags;
 };

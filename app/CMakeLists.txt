@@ -25,6 +25,7 @@ include_directories(
         ./src
         ../build/3dparty/taglib
         ../cmake-build-debug
+        ../cmake-build-debug/3dparty/taglib/
         ${TAGLIB_PATH}/ape
         ${TAGLIB_PATH}/asf
         ${TAGLIB_PATH}/flac

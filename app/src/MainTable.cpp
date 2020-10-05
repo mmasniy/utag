@@ -41,7 +41,6 @@ MainTable::MainTable(QWidget *parent) : QTableWidget(parent) {
 }
 
 void MainTable::setApp(const QString& sPath) {
-    std::cout << sPath.toStdString() << std::endl;
     Application app;
 
     QDir dirent(sPath);
@@ -81,7 +80,6 @@ void MainTable::commitData(QWidget *editor) {
     QAbstractItemView::commitData(editor);
 
     for (auto &i : selectedIndexes()) {
-        std::cout << i.row() << std::endl;
         model()->setData(i, currentItem()->data(Qt::EditRole), Qt::EditRole);
     }
 }

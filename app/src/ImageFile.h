@@ -25,5 +25,5 @@ protected:
     bool save() override;
 
 private:
-    static ImageFile *singleton;
+    static ImageFile *m_singleton;
 };
