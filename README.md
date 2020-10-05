@@ -39,9 +39,9 @@ album images and lyrics.
 
 1. `git clone --recursive https://github.com/mmasniy/utag.git`
 2. `cmake . -Bbuild -Wdev -Werror=dev && cmake --build ./build`
-3. `./build/app/utag` or `/build/app/utag [path to directory]`
+3. `/build/app/utag` or `/build/app/utag [path to directory]`
 
-# Tools who I used
+# Tools that I used
 
  - **Cmake** - is an open-source, cross-platform family of tools designed to build, test and package software.
  - **Qt** - is the faster, smarter way to create innovative devices, modern UIs & applications for multiple screens.
