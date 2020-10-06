@@ -39,7 +39,7 @@ album images and lyrics.
 
 1. `git clone --recursive https://github.com/mmasniy/utag.git`
 2. `cmake . -Bbuild -Wdev -Werror=dev && cmake --build ./build`
-3. `/build/app/utag` or `/build/app/utag [path to directory]`
+3. `./build/app/utag` or `./build/app/utag [path to directory]`
 
 # Tools that I used
 
